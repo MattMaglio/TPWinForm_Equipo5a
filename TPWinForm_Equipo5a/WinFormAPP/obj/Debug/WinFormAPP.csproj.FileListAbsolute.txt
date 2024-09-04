@@ -1,0 +1,13 @@
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.exe.config
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.exe
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.pdb
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.csproj.AssemblyReference.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.Properties.Resources.resources
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.csproj.GenerateResource.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.csproj.CoreCompileInputs.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.exe
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.pdb
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmMain.resources
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtSearch.resources
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtAdd.resources
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmListArt.resources
