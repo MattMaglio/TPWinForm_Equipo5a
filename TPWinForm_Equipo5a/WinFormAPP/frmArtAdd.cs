@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ApplicationService;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,34 +19,27 @@ namespace WinFormAPP
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmArtAdd_Load(object sender, EventArgs e)
         {
-
+            /*
+            MarcaAS marca = new MarcaAS();
+            cbMarcaArt.DataSource = marca.listar();
+            */
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddArt_Click(object sender, EventArgs e)
         {
+            /*
+            Articulo NuevoArt = new Articulo();
+            ArticuloAS NuevoArtAS = new ArticuloAS();
+
+            NuevoArt.Codigo = tbCodArt.Text;
+            //
+            //
+            NuevoArtAS.insertarArt(NuevoArt);
+            */
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
     }
 }

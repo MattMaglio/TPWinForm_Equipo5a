@@ -47,7 +47,9 @@
             this.gbSearchArt = new System.Windows.Forms.GroupBox();
             this.btnModArt = new System.Windows.Forms.Button();
             this.btnDeletArt = new System.Windows.Forms.Button();
+            this.dgvTest = new System.Windows.Forms.DataGridView();
             this.gbSearchArt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTest)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTituloArtSearch
@@ -68,6 +70,7 @@
             this.btnSeachArt.TabIndex = 32;
             this.btnSeachArt.Text = "Buscar artículo";
             this.btnSeachArt.UseVisualStyleBackColor = true;
+            this.btnSeachArt.Click += new System.EventHandler(this.btnSeachArt_Click);
             // 
             // cbMarcaArt
             // 
@@ -203,7 +206,6 @@
             this.gbSearchArt.TabIndex = 33;
             this.gbSearchArt.TabStop = false;
             this.gbSearchArt.Text = "Articulo:";
-            this.gbSearchArt.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnModArt
             // 
@@ -223,12 +225,21 @@
             this.btnDeletArt.Text = "Eliminar artículo";
             this.btnDeletArt.UseVisualStyleBackColor = true;
             // 
+            // dgvTest
+            // 
+            this.dgvTest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTest.Location = new System.Drawing.Point(148, 414);
+            this.dgvTest.Name = "dgvTest";
+            this.dgvTest.Size = new System.Drawing.Size(636, 169);
+            this.dgvTest.TabIndex = 36;
+            // 
             // frmArtSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.dgvTest);
             this.Controls.Add(this.btnDeletArt);
             this.Controls.Add(this.btnModArt);
             this.Controls.Add(this.gbSearchArt);
@@ -240,6 +251,7 @@
             this.Text = "frmArtSearch";
             this.gbSearchArt.ResumeLayout(false);
             this.gbSearchArt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +278,6 @@
         private System.Windows.Forms.GroupBox gbSearchArt;
         private System.Windows.Forms.Button btnModArt;
         private System.Windows.Forms.Button btnDeletArt;
+        private System.Windows.Forms.DataGridView dgvTest;
     }
 }

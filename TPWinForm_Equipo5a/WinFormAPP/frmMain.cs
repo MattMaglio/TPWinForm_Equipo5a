@@ -58,7 +58,7 @@ namespace WinFormAPP
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Close();
         }
 
         private void buscarArticuloToolStripMenuItem_Click(object sender, EventArgs e)

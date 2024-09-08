@@ -1,0 +1,6 @@
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\bin\Debug\Model.dll
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\bin\Debug\Model.pdb
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.dll
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.pdb

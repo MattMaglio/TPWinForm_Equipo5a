@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgvArt = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvArt
+            // 
+            this.dgvArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArt.Location = new System.Drawing.Point(12, 12);
+            this.dgvArt.Name = "dgvArt";
+            this.dgvArt.Size = new System.Drawing.Size(522, 384);
+            this.dgvArt.TabIndex = 0;
+            this.dgvArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArt_CellContentClick);
             // 
             // frmListArt
             // 
@@ -36,12 +47,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.dgvArt);
             this.Name = "frmListArt";
             this.Text = "frmListArt";
+            this.Load += new System.EventHandler(this.frmListArt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvArt;
     }
 }

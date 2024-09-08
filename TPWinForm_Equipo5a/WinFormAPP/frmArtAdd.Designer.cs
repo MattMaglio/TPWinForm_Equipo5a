@@ -55,7 +55,6 @@
             this.lbCodArt.Size = new System.Drawing.Size(96, 13);
             this.lbCodArt.TabIndex = 0;
             this.lbCodArt.Text = "Codigo de Articulo:";
-            this.lbCodArt.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbNomArt
             // 
@@ -170,7 +169,7 @@
             this.btnAddArt.TabIndex = 15;
             this.btnAddArt.Text = "Agregar artículo";
             this.btnAddArt.UseVisualStyleBackColor = true;
-            this.btnAddArt.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddArt.Click += new System.EventHandler(this.btnAddArt_Click);
             // 
             // lbTituloArtAltas
             // 
@@ -181,7 +180,6 @@
             this.lbTituloArtAltas.Size = new System.Drawing.Size(166, 25);
             this.lbTituloArtAltas.TabIndex = 16;
             this.lbTituloArtAltas.Text = "Alta de artículos";
-            this.lbTituloArtAltas.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lbExitoArtAdd
             // 
@@ -192,7 +190,6 @@
             this.lbExitoArtAdd.Size = new System.Drawing.Size(278, 15);
             this.lbExitoArtAdd.TabIndex = 17;
             this.lbExitoArtAdd.Text = "place holder: ¡Articulo agregado con exito!";
-            this.lbExitoArtAdd.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // frmArtAdd
             // 
