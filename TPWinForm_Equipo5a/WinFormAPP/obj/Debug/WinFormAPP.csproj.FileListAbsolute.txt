@@ -11,3 +11,16 @@ D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtSearch.resources
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtAdd.resources
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmListArt.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.exe.config
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.exe
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.pdb
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtSearch.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmListArt.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmMain.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtAdd.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.Properties.Resources.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.exe
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.pdb
