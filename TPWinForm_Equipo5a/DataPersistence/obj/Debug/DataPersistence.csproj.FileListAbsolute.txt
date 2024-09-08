@@ -1,0 +1,6 @@
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\bin\Debug\DataPersistence.dll
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\bin\Debug\DataPersistence.pdb
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.csproj.AssemblyReference.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.csproj.CoreCompileInputs.cache
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.dll
+D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.pdb

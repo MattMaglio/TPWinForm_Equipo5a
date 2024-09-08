@@ -106,5 +106,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationService\ApplicationService.csproj">
+      <Project>{b083f742-71b9-492f-b094-b70956e56990}</Project>
+      <Name>ApplicationService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataPersistence\DataPersistence.csproj">
+      <Project>{77867393-81c6-4873-9e5b-cf7f315eb53a}</Project>
+      <Name>DataPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{a2492c71-c0e6-4fd7-8390-c8dcb4b4db92}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
