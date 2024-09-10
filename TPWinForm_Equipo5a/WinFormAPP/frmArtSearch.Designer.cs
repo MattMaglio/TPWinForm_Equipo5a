@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbTituloArtSearch = new System.Windows.Forms.Label();
+            this.lbTituloArt = new System.Windows.Forms.Label();
             this.btnSeachArt = new System.Windows.Forms.Button();
             this.cboMarcaArt = new System.Windows.Forms.ComboBox();
             this.cboCatArt = new System.Windows.Forms.ComboBox();
@@ -59,16 +59,16 @@
             this.gbUrl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbTituloArtSearch
+            // lbTituloArt
             // 
-            this.lbTituloArtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbTituloArtSearch.AutoSize = true;
-            this.lbTituloArtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloArtSearch.Location = new System.Drawing.Point(193, 66);
-            this.lbTituloArtSearch.Name = "lbTituloArtSearch";
-            this.lbTituloArtSearch.Size = new System.Drawing.Size(226, 25);
-            this.lbTituloArtSearch.TabIndex = 17;
-            this.lbTituloArtSearch.Text = "Busqueda de artículos";
+            this.lbTituloArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbTituloArt.AutoSize = true;
+            this.lbTituloArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTituloArt.Location = new System.Drawing.Point(193, 66);
+            this.lbTituloArt.Name = "lbTituloArt";
+            this.lbTituloArt.Size = new System.Drawing.Size(226, 25);
+            this.lbTituloArt.TabIndex = 17;
+            this.lbTituloArt.Text = "Busqueda de artículos";
             // 
             // btnSeachArt
             // 
@@ -326,7 +326,7 @@
             this.Controls.Add(this.btnSeachArt);
             this.Controls.Add(this.tbCodArt);
             this.Controls.Add(this.lbCodArt);
-            this.Controls.Add(this.lbTituloArtSearch);
+            this.Controls.Add(this.lbTituloArt);
             this.Name = "frmArtSearch";
             this.Text = "frmArtSearch";
             this.Load += new System.EventHandler(this.frmArtSearch_Load);
@@ -343,7 +343,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbTituloArtSearch;
+        private System.Windows.Forms.Label lbTituloArt;
         private System.Windows.Forms.Button btnSeachArt;
         private System.Windows.Forms.ComboBox cboMarcaArt;
         private System.Windows.Forms.ComboBox cboCatArt;

@@ -144,6 +144,8 @@ namespace WinFormAPP
 
             art = artAS.buscarArt(tbCodArt.Text);
 
+            lbTituloArt.Text = "Modificación de artículos";
+            
             cargarFormularioEnable();
             cargarArticuloBuscado();
             btnDeletArt.Enabled = false;            

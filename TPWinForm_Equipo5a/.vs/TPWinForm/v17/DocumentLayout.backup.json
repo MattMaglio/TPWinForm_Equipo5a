@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\winformapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -41,12 +41,11 @@
               "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmMain.cs [Design]",
               "RelativeToolTip": "WinFormAPP\\frmMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T01:39:49.59Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-10T01:39:49.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "frmArtSearch.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
               "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
@@ -64,14 +63,14 @@
               "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
               "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
               "RelativeToolTip": "WinFormAPP\\frmArtSearch.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAuwMYAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwJIAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T15:07:33.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ArticuloAS.cs",
               "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
               "RelativeDocumentMoniker": "ApplicationService\\ArticuloAS.cs",
@@ -79,12 +78,11 @@
               "RelativeToolTip": "ApplicationService\\ArticuloAS.cs",
               "ViewState": "AgIAAI4AAAAAAAAAAAAowLkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T23:16:15.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T23:16:15.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ImagenAS.cs",
               "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ImagenAS.cs",
               "RelativeDocumentMoniker": "ApplicationService\\ImagenAS.cs",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "ApplicationService\\ImagenAS.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAswDEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T02:34:10.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T02:34:10.794Z"
             }
           ]
         }
