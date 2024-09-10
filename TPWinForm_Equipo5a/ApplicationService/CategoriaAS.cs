@@ -1,6 +1,7 @@
 ﻿using DataPersistence;
 using Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,42 +10,38 @@ using System.Threading.Tasks;
 
 namespace ApplicationService
 {
-    public class CategoriaAS
+    public  class CategoriaAS
     {
         public List<Categoria> listar()
         {
-            List<Categoria> lista = new List<Categoria>();
-            DataAccess conexion = new DataAccess();
-            DataManipulator query = new DataManipulator();
             SqlDataReader result;
-
+            List<Categoria> lista = new List<Categoria>();
+            DataAccess data = new DataAccess();
+            DataManipulator query = new DataManipulator();
             try
             {
-
-                query.configSqlQuery("SELECT Id, Descripcion FROM CATEGORIAS");
-                query.configSqlConexion(conexion.obtenerConexion());
-
-                conexion.abrirConexion();
-                result = query.ejecutarConsulta();
-
+                query.configSqlQuery("Select id, descripcion from Categorias");
+                query.configSqlConexion(data.obtenerConexion());
+                data.abrirConexion();
+                result = query.ejecutarSelect();
                 while (result.Read())
                 {
-                    Categoria auxCat = new Categoria();
-                    auxCat.Id = (int)result["Id"];
-                    auxCat.Descripcion = (string)result["Descripcion"];
-
-                    lista.Add(auxCat);
+                    Categoria aux = new Categoria();
+                    aux.Id = (int)result["Id"];
+                    aux.Descripcion = (string)result["Descripcion"];
+                    lista.Add(aux);
                 }
 
-                return lista;
+             return lista;
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
             finally
             {
-                conexion.cerrarConexion();
+                data.cerrarConexion();
             }
 
         }

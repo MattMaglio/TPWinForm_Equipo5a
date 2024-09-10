@@ -6,7 +6,8 @@ namespace DataPersistence
     public class DataManipulator
     {
         public SqlCommand sqlQuery { get; set; }
-        public SqlCommand sqlConexion { get; set; }
+
+
 
         public void configSqlQuery(string query)
         {
@@ -51,5 +52,23 @@ namespace DataPersistence
         {
             sqlQuery.Parameters.AddWithValue(nombre, valor);
         }
+        // Ejecuta una acción(como INSERT, UPDATE, DELETE)
+        public void ejecutarAccion()
+        {
+            using (SqlConnection conexion = new SqlConnection(/* aquí tu string de conexión */))
+            {
+                try
+                {
+                    sqlQuery.Connection = conexion;
+                    conexion.Open();
+                    sqlQuery.ExecuteNonQuery(); // Ejecuta el comando, sin esperar un resultado
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al ejecutar la acción: " + ex.Message);
+                }
+            }
+        }
+
     }
 }
