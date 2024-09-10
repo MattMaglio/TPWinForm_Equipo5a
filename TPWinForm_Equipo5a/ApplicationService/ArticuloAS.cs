@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using Model;
 using DataPersistence;
 using System.Data.SqlClient;
+using System.Windows;
 using System.Data.SqlTypes;
+
 
 namespace ApplicationService
 {
@@ -90,7 +92,8 @@ namespace ApplicationService
             try
             {
 
-                query.configSqlQuery("SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS");
+                query.configSqlQuery("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.IdMarca, a.IdCategoria, " +
+                    "a.Precio, i.IdArticulo, i.ImagenUrl FROM ARTICULOS a JOIN IMAGENES i ON a.Id = i.IdArticulo");
                 query.configSqlConexion(conexion.obtenerConexion());
 
                 conexion.abrirConexion();
@@ -99,6 +102,7 @@ namespace ApplicationService
                 while (result.Read())
                 {
                     Articulo auxArt = new Articulo();
+                   
                     auxArt.Id = (int)result["Id"];
                     auxArt.Codigo = (string)result["Codigo"];
                     auxArt.Nombre = (string)result["Nombre"];
@@ -106,6 +110,18 @@ namespace ApplicationService
                     auxArt.IdMarca = (int)result["IdMarca"];
                     auxArt.IdCategoria = (int)result["IdCategoria"];
                     auxArt.Precio = (decimal)result["Precio"];
+
+                    // traigo datos de la tabla imagenes
+                    auxArt.Imagen = new Imagen();
+                    if (!(result["IdArticulo"] is DBNull))
+                    {
+                     auxArt.Imagen.IdArticulo = (int)result["IdArticulo"];
+                    }
+                    if (!(result["ImagenUrl"] is DBNull))
+                    {
+                        auxArt.Imagen.ImagenUrl = (string)result["ImagenUrl"];
+                    }
+                    
 
 
                     lista.Add(auxArt);
@@ -123,5 +139,34 @@ namespace ApplicationService
             }
 
         }
+        public void eliminar (int id)
+        {
+            DataAccess datos = new DataAccess();
+            try
+            {
+                // Configura el comando para eliminar
+                using (SqlCommand comando = new SqlCommand("DELETE FROM ARTICULOS WHERE Id = @id", datos.obtenerConexion()))
+                {
+                    // Agrega el parámetro al comando
+                    comando.Parameters.AddWithValue("@id", id);
+
+                    // Abre la conexión
+                    datos.abrirConexion();
+
+                    // Ejecuta el comando
+                    comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        
     }
+
 }

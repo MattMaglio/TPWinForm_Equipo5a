@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DataPersistence
 {
@@ -8,10 +9,10 @@ namespace DataPersistence
 
         public DataAccess()
         {
-            string connectionString = "Server=.\\PROGRAMACION_III;Database=CATALOGO_P3_DB;Trusted_Connection=True;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MiCadenaConexion"].ConnectionString;
             conexionDB = new SqlConnection(connectionString);
         }
-
+        
         public SqlConnection obtenerConexion()
         {
             return conexionDB;
