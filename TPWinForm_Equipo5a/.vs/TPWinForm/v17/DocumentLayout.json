@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\",
+  "WorkspaceRootPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\imagenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\winformapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\model\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|solutionrelative:model\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\model\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|solutionrelative:model\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|c:\\users\\danie\\onedrive\\escritorio\\itati\\programacion 3\\actividades\\actividad 2 tp winforms\\tpwinform_equipo5a\\tpwinform_equipo5a\\model\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|solutionrelative:model\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +38,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmMain.cs",
-              "RelativeDocumentMoniker": "WinFormAPP\\frmMain.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmMain.cs [Design]",
-              "RelativeToolTip": "WinFormAPP\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T01:39:49.59Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmArtSearch.cs [Design]",
-              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
-              "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs [Design]",
-              "RelativeToolTip": "WinFormAPP\\frmArtSearch.cs [Design]",
+              "Title": "ImagenAS.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ImagenAS.cs",
+              "RelativeDocumentMoniker": "ApplicationService\\ImagenAS.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ImagenAS.cs",
+              "RelativeToolTip": "ApplicationService\\ImagenAS.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAF4AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T15:07:31.284Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmArtSearch.cs",
-              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
-              "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
-              "RelativeToolTip": "WinFormAPP\\frmArtSearch.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T15:07:33.055Z",
+              "WhenOpened": "2024-09-10T21:36:11.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArticuloAS.cs",
-              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
-              "RelativeDocumentMoniker": "ApplicationService\\ArticuloAS.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
-              "RelativeToolTip": "ApplicationService\\ArticuloAS.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAowLkAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Categoria.cs",
+              "RelativeDocumentMoniker": "Model\\Categoria.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Categoria.cs",
+              "RelativeToolTip": "Model\\Categoria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T23:16:15.741Z"
+              "WhenOpened": "2024-09-10T21:35:00.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Imagen.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Imagen.cs",
+              "RelativeDocumentMoniker": "Model\\Imagen.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Imagen.cs",
+              "RelativeToolTip": "Model\\Imagen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:34:55.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Articulo.cs",
+              "RelativeDocumentMoniker": "Model\\Articulo.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Articulo.cs",
+              "RelativeToolTip": "Model\\Articulo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:34:52.977Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ImagenAS.cs",
-              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ImagenAS.cs",
-              "RelativeDocumentMoniker": "ApplicationService\\ImagenAS.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ImagenAS.cs",
-              "RelativeToolTip": "ApplicationService\\ImagenAS.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAswDEAAABAAAAAAAAAAA==",
+              "Title": "frmArtSearch.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs [Design]",
+              "RelativeToolTip": "WinFormAPP\\frmArtSearch.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T02:34:10.794Z"
+              "WhenOpened": "2024-09-10T21:19:29.975Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmArtAdd.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtAdd.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmArtAdd.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtAdd.cs",
+              "RelativeToolTip": "WinFormAPP\\frmArtAdd.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwFEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:06:35.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmArtAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtAdd.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmArtAdd.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\ITATI\\PROGRAMACION 3\\ACTIVIDADES\\Actividad 2 TP WINFORMS\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtAdd.cs [Design]",
+              "RelativeToolTip": "WinFormAPP\\frmArtAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T20:47:40.479Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
