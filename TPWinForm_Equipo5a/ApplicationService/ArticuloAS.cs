@@ -60,8 +60,8 @@ namespace ApplicationService
                     auxArt.Codigo = (string)result["Codigo"];
                     auxArt.Nombre = (string)result["Nombre"];
                     auxArt.Descripcion = (string)result["Descripcion"];
-                    auxArt.IdMarca = (int)result["IdMarca"];
-                    auxArt.IdCategoria = (int)result["IdCategoria"];
+                    auxArt.Marca.Id = (int)result["IdMarca"];
+                    auxArt.Categoria.Id = (int)result["IdCategoria"];
                     auxArt.Precio = (decimal)result["Precio"];
 
 
@@ -107,9 +107,13 @@ namespace ApplicationService
                     auxArt.Codigo = (string)result["Codigo"];
                     auxArt.Nombre = (string)result["Nombre"];
                     auxArt.Descripcion = (string)result["Descripcion"];
-                    auxArt.IdMarca = (int)result["IdMarca"];
-                    auxArt.IdCategoria = (int)result["IdCategoria"];
                     auxArt.Precio = (decimal)result["Precio"];
+
+                    auxArt.Marca = new Marca();                   
+                    auxArt.Marca.Id = (int)result["IdMarca"];
+
+                    auxArt.Categoria = new Categoria();
+                    auxArt.Categoria.Id = (int)result["IdCategoria"];
 
                     // traigo datos de la tabla imagenes
                     auxArt.Imagen = new Imagen();

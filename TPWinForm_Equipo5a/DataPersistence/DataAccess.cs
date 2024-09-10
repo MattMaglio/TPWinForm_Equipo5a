@@ -9,10 +9,10 @@ namespace DataPersistence
 
         public DataAccess()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MiCadenaConexion"].ConnectionString;
+            string connectionString = "Server=.\\SQLEXPRESS01;Database=CATALOGO_P3_DB;Trusted_Connection=True;";
             conexionDB = new SqlConnection(connectionString);
         }
-        
+       
         public SqlConnection obtenerConexion()
         {
             return conexionDB;

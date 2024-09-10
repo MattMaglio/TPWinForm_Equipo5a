@@ -67,9 +67,9 @@ namespace WinFormAPP
         }
         private void  ocultarColumnas()
         {
-            dgvArt.Columns["IdMarca"].Visible = false;
-            dgvArt.Columns["IdCategoria"].Visible = false;
-            dgvArt.Columns["Id"].Visible = false;
+           // dgvArt.Columns["IdMarca"].Visible = false;
+           // dgvArt.Columns["IdCategoria"].Visible = false;
+            //dgvArt.Columns["Id"].Visible = false;
             if (dgvArt.Columns["ImagenUrl"]!= null)
             {
                 dgvArt.Columns["ImagenUrl"].Visible = false;
@@ -80,7 +80,8 @@ namespace WinFormAPP
                 MessageBox.Show("La columna 'ImagenUrl' no está presente en el DataGridView.");
             }*/
         }
-        private void cargarImagenUrl(string imagen)
+         
+        public void cargarImagenUrl(string imagen)
         {
             try
             {
@@ -95,7 +96,9 @@ namespace WinFormAPP
                 pboxImagenUrl.Load("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
 
             }
+
         }
+        
 
         private void dgvArt_SelectionChanged(object sender, EventArgs e)
         {
@@ -153,6 +156,15 @@ namespace WinFormAPP
                 MessageBox.Show("Seleccionar un artículo para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo articulo;
+            articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
+            frmArtAdd modificar = new frmArtAdd(articulo);
+            modificar.ShowDialog();
+
         }
     }
 }

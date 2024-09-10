@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|c:\\users\\lenovo\\desktop\\proyectolabii\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|c:\\users\\lenovo\\desktop\\proyectolabii\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\categoriaas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\categoriaas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|c:\\users\\lenovo\\desktop\\proyectolabii\\tpwinform_equipo5a\\tpwinform_equipo5a\\applicationservice\\marcaas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\marcaas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,12 +31,12 @@
       "RelativeMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|solutionrelative:datapersistence\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\datapersistence\\datamanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|solutionrelative:datapersistence\\datamanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|c:\\users\\lenovo\\desktop\\proyectolabii\\tpwinform_equipo5a\\tpwinform_equipo5a\\model\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2492C71-C0E6-4FD7-8390-C8DCB4B4DB92}|Model\\Model.csproj|solutionrelative:model\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,56 +50,72 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataManipulator.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataManipulator.cs",
-              "RelativeDocumentMoniker": "DataPersistence\\DataManipulator.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataManipulator.cs",
-              "RelativeToolTip": "DataPersistence\\DataManipulator.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAiwDsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MarcaAS.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\MarcaAS.cs",
+              "RelativeDocumentMoniker": "ApplicationService\\MarcaAS.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\MarcaAS.cs",
+              "RelativeToolTip": "ApplicationService\\MarcaAS.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T00:26:46.818Z"
+              "WhenOpened": "2024-09-10T16:58:30.632Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataAccess.cs",
-              "RelativeDocumentMoniker": "DataPersistence\\DataAccess.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataAccess.cs",
-              "RelativeToolTip": "DataPersistence\\DataAccess.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAoAAAAJAAAAAAAAAA==",
+              "Title": "CategoriaAS.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\CategoriaAS.cs",
+              "RelativeDocumentMoniker": "ApplicationService\\CategoriaAS.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\CategoriaAS.cs",
+              "RelativeToolTip": "ApplicationService\\CategoriaAS.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T20:35:22.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticuloAS.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
-              "RelativeDocumentMoniker": "ApplicationService\\ArticuloAS.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
-              "RelativeToolTip": "ApplicationService\\ArticuloAS.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAgwKIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T20:33:11.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmListArt.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
-              "RelativeDocumentMoniker": "WinFormAPP\\frmListArt.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
-              "RelativeToolTip": "WinFormAPP\\frmListArt.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAYwB4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T01:18:02.415Z",
+              "WhenOpened": "2024-09-10T16:11:20.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ArticuloAS.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
+              "RelativeDocumentMoniker": "ApplicationService\\ArticuloAS.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
+              "RelativeToolTip": "ApplicationService\\ArticuloAS.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAgwHIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T20:33:11.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmArtAdd.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtAdd.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmArtAdd.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtAdd.cs",
+              "RelativeToolTip": "WinFormAPP\\frmArtAdd.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwCoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T13:12:32.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataAccess.cs",
+              "RelativeDocumentMoniker": "DataPersistence\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataAccess.cs",
+              "RelativeToolTip": "DataPersistence\\DataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T20:35:22.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "frmListArt.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
               "RelativeDocumentMoniker": "WinFormAPP\\frmListArt.cs",
@@ -92,6 +124,45 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T00:26:20.439Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmListArt.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmListArt.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
+              "RelativeToolTip": "WinFormAPP\\frmListArt.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAQwEcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T01:18:02.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataManipulator.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataManipulator.cs",
+              "RelativeDocumentMoniker": "DataPersistence\\DataManipulator.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\DataPersistence\\DataManipulator.cs",
+              "RelativeToolTip": "DataPersistence\\DataManipulator.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvzsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T00:26:46.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Articulo.cs",
+              "RelativeDocumentMoniker": "Model\\Articulo.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\Model\\Articulo.cs",
+              "RelativeToolTip": "Model\\Articulo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T17:02:10.073Z",
+              "EditorCaption": ""
             }
           ]
         }
