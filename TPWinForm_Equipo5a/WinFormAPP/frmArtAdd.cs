@@ -26,6 +26,7 @@ namespace WinFormAPP
             MarcaAS marca = new MarcaAS();
             CategoriaAS categoria = new CategoriaAS();
 
+
             try
             {
             cboMarcaArt.DataSource = marca.listar();
@@ -47,7 +48,9 @@ namespace WinFormAPP
             //Cargo el obj
             Articulo art = new Articulo(); 
             ArticuloAS artAS = new ArticuloAS();
-            
+            ImagenAS imgAS = new ImagenAS();
+
+
 
             try
             {
@@ -64,6 +67,21 @@ namespace WinFormAPP
                 artAS.agregarArt(art);
                 MessageBox.Show("Artículo agregado exitosamente");
 
+
+            // Verifico si se ingresó URL de Img
+                if (!string.IsNullOrWhiteSpace(tbImgArt.Text))
+                {
+                    Imagen img = new Imagen
+                    {
+                        IdArticulo = art.Id, 
+                        ImagenUrl = tbImgArt.Text
+                    };
+
+                    // Agrego la imagen
+                    imgAS.agregarImagen(img);
+                    
+                }
+
             }
             catch (Exception ex)
             {
@@ -72,9 +90,26 @@ namespace WinFormAPP
             }
         }
 
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbArt.Load(imagen);
+            }
+            catch (Exception)
+            {
+
+                pbArt.Load("https://picsum.photos/id/870/536/354?grayscale&blur=2");
+            }
+        }
         private void btnCancelAdd_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void tbImgArt_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(tbImgArt.Text);
         }
     }
 }
