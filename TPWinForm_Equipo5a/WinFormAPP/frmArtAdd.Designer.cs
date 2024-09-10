@@ -40,8 +40,8 @@
             this.tbDescArt = new System.Windows.Forms.TextBox();
             this.tbImgArt = new System.Windows.Forms.TextBox();
             this.tbPreArt = new System.Windows.Forms.TextBox();
-            this.cbCatArt = new System.Windows.Forms.ComboBox();
-            this.cbMarcaArt = new System.Windows.Forms.ComboBox();
+            this.cboCatArt = new System.Windows.Forms.ComboBox();
+            this.cboMarcaArt = new System.Windows.Forms.ComboBox();
             this.btnAddArt = new System.Windows.Forms.Button();
             this.lbTituloArtAltas = new System.Windows.Forms.Label();
             this.lbExitoArtAdd = new System.Windows.Forms.Label();
@@ -145,21 +145,21 @@
             this.tbPreArt.Size = new System.Drawing.Size(104, 20);
             this.tbPreArt.TabIndex = 12;
             // 
-            // cbCatArt
+            // cboCatArt
             // 
-            this.cbCatArt.FormattingEnabled = true;
-            this.cbCatArt.Location = new System.Drawing.Point(330, 206);
-            this.cbCatArt.Name = "cbCatArt";
-            this.cbCatArt.Size = new System.Drawing.Size(179, 21);
-            this.cbCatArt.TabIndex = 13;
+            this.cboCatArt.FormattingEnabled = true;
+            this.cboCatArt.Location = new System.Drawing.Point(330, 206);
+            this.cboCatArt.Name = "cboCatArt";
+            this.cboCatArt.Size = new System.Drawing.Size(179, 21);
+            this.cboCatArt.TabIndex = 13;
             // 
-            // cbMarcaArt
+            // cboMarcaArt
             // 
-            this.cbMarcaArt.FormattingEnabled = true;
-            this.cbMarcaArt.Location = new System.Drawing.Point(330, 231);
-            this.cbMarcaArt.Name = "cbMarcaArt";
-            this.cbMarcaArt.Size = new System.Drawing.Size(179, 21);
-            this.cbMarcaArt.TabIndex = 14;
+            this.cboMarcaArt.FormattingEnabled = true;
+            this.cboMarcaArt.Location = new System.Drawing.Point(330, 231);
+            this.cboMarcaArt.Name = "cboMarcaArt";
+            this.cboMarcaArt.Size = new System.Drawing.Size(179, 21);
+            this.cboMarcaArt.TabIndex = 14;
             // 
             // btnAddArt
             // 
@@ -200,8 +200,8 @@
             this.Controls.Add(this.lbExitoArtAdd);
             this.Controls.Add(this.lbTituloArtAltas);
             this.Controls.Add(this.btnAddArt);
-            this.Controls.Add(this.cbMarcaArt);
-            this.Controls.Add(this.cbCatArt);
+            this.Controls.Add(this.cboMarcaArt);
+            this.Controls.Add(this.cboCatArt);
             this.Controls.Add(this.tbPreArt);
             this.Controls.Add(this.tbImgArt);
             this.Controls.Add(this.tbDescArt);
@@ -238,8 +238,8 @@
         private System.Windows.Forms.TextBox tbDescArt;
         private System.Windows.Forms.TextBox tbImgArt;
         private System.Windows.Forms.TextBox tbPreArt;
-        private System.Windows.Forms.ComboBox cbCatArt;
-        private System.Windows.Forms.ComboBox cbMarcaArt;
+        private System.Windows.Forms.ComboBox cboCatArt;
+        private System.Windows.Forms.ComboBox cboMarcaArt;
         private System.Windows.Forms.Button btnAddArt;
         private System.Windows.Forms.Label lbTituloArtAltas;
         private System.Windows.Forms.Label lbExitoArtAdd;

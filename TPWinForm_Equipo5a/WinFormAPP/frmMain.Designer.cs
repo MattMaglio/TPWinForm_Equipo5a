@@ -93,7 +93,7 @@
             // buscarArticuloToolStripMenuItem
             // 
             this.buscarArticuloToolStripMenuItem.Name = "buscarArticuloToolStripMenuItem";
-            this.buscarArticuloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarArticuloToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.buscarArticuloToolStripMenuItem.Text = "Buscar";
             this.buscarArticuloToolStripMenuItem.Click += new System.EventHandler(this.buscarArticuloToolStripMenuItem_Click);
             // 
@@ -114,7 +114,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 659);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 799);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(884, 22);
             this.statusStrip1.TabIndex = 1;
@@ -137,13 +137,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 681);
+            this.ClientSize = new System.Drawing.Size(884, 821);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
-            this.MinimumSize = new System.Drawing.Size(720, 600);
+            this.MinimumSize = new System.Drawing.Size(900, 800);
             this.Name = "frmMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TpWinForm_5a";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

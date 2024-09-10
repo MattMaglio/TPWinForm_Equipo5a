@@ -9,26 +9,6 @@ namespace ApplicationService
 {
     public class ArticuloAS
     {
-
-        /*public Articulo insertarArt(Articulo art)
-        {
-            DataAccess conexion = new DataAccess();
-            DataManipulator query = new DataManipulator();
-
-            query.configSqlQuery("INSERT INTO ARTICULOS (Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio),(@codArt, @descArt)";
-            query.configSqlConexion(conexion.obtenerConexion());
-            query.configSqlParams("@codArt", art.Codigo);
-            //query.configSqlParams("@codArt", codFiltrado);
-
-            conexion.abrirConexion();
-            query.ejecutarSelect();
-            conexion.cerrarConexion();
-
-
-
-        }
-        */
-
         public Articulo buscarArt(string codFiltrado)
         {
 
@@ -43,12 +23,12 @@ namespace ApplicationService
             try
             {
 
-                query.configSqlQuery("SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS WHERE Codigo = @codArt");
+                query.configSqlQuery("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion,m.Id AS 'Id Marca', m.Descripcion AS 'Marca',c.Id AS 'Id Categoria', c.Descripcion AS 'Categoria', a.Precio FROM ARTICULOS a LEFT JOIN MARCAS m ON m.Id = a.IdMarca LEFT JOIN CATEGORIAS c ON c.Id = a.IdCategoria WHERE Codigo = @codArt");
                 query.configSqlConexion(conexion.obtenerConexion());
                 query.configSqlParams("@codArt", codFiltrado);
 
                 conexion.abrirConexion();
-                result = query.ejecutarSelect();
+                result = query.ejecutarConsulta();
 
 
 
@@ -58,8 +38,27 @@ namespace ApplicationService
                     auxArt.Codigo = (string)result["Codigo"];
                     auxArt.Nombre = (string)result["Nombre"];
                     auxArt.Descripcion = (string)result["Descripcion"];
-                    auxArt.IdMarca = (int)result["IdMarca"];
-                    auxArt.IdCategoria = (int)result["IdCategoria"];
+                    auxArt.Marca = new Marca();
+                    if (!(result["Id Marca"] is DBNull))
+                    {
+                        auxArt.Marca.Id = (int)result["Id Marca"];
+                        auxArt.Marca.Descripcion = (string)result["Marca"];
+                    }
+                    else
+                    {
+                        auxArt.Marca.Descripcion = "Sin marca";
+                    }
+                    auxArt.Categoria = new Categoria();
+                    if (!(result["Id Categoria"] is DBNull))
+                    {
+                        auxArt.Categoria.Id = (int)result["Id Categoria"];
+                        auxArt.Categoria.Descripcion = (string)result["Categoria"];
+                    }
+                    else
+                    {
+                        auxArt.Categoria.Descripcion = "Sin categoria";
+                    }
+
                     auxArt.Precio = (decimal)result["Precio"];
 
 
@@ -90,21 +89,38 @@ namespace ApplicationService
             try
             {
 
-                query.configSqlQuery("SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS");
+                query.configSqlQuery("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Descripcion AS 'Marca', c.Descripcion AS 'Categoria', a.Precio FROM ARTICULOS a LEFT JOIN MARCAS m ON m.Id = a.IdMarca LEFT JOIN CATEGORIAS c ON c.Id = a.IdCategoria");
                 query.configSqlConexion(conexion.obtenerConexion());
 
                 conexion.abrirConexion();
-                result = query.ejecutarSelect();
+                result = query.ejecutarConsulta();
 
                 while (result.Read())
                 {
                     Articulo auxArt = new Articulo();
+
                     auxArt.Id = (int)result["Id"];
                     auxArt.Codigo = (string)result["Codigo"];
                     auxArt.Nombre = (string)result["Nombre"];
                     auxArt.Descripcion = (string)result["Descripcion"];
-                    auxArt.IdMarca = (int)result["IdMarca"];
-                    auxArt.IdCategoria = (int)result["IdCategoria"];
+                    auxArt.Marca = new Marca();
+                    if (!(result.IsDBNull(result.GetOrdinal("Marca"))))
+                    {
+                        auxArt.Marca.Descripcion = (string)result["Marca"];
+                    }
+                    else 
+                    {
+                        auxArt.Marca.Descripcion = "Sin marca";
+                    }
+                    auxArt.Categoria = new Categoria();
+                    if (!(result["Categoria"] is DBNull))
+                    {
+                        auxArt.Categoria.Descripcion = (string)result["Categoria"];
+                    }
+                    else
+                    {
+                        auxArt.Categoria.Descripcion = "Sin categoria";
+                    }
                     auxArt.Precio = (decimal)result["Precio"];
 
 
@@ -122,6 +138,64 @@ namespace ApplicationService
                 conexion.cerrarConexion();
             }
 
+        }
+        
+        public void actualizarArticulo(Articulo art)
+        {
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
+
+            List<Articulo> lista = new List<Articulo>();
+            Articulo auxArt = new Articulo();
+
+            try
+            {
+
+                query.configSqlQuery("UPDATE ARTICULOS SET Nombre = @nombre, Descripcion = @desc, IdCategoria = @idCat, IdMarca = @idMarca, Precio = @precio WHERE Codigo = @codArt");
+                query.configSqlConexion(conexion.obtenerConexion());
+                query.configSqlParams("@codArt", art.Codigo);
+                query.configSqlParams("@nombre", art.Nombre);
+                query.configSqlParams("@desc", art.Descripcion);
+                query.configSqlParams("@idCat", art.Categoria.Id);
+                query.configSqlParams("@idMarca", art.Marca.Id);
+                query.configSqlParams("@precio", Convert.ToDecimal(art.Precio));
+
+                conexion.abrirConexion();
+                query.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
+
+        public void borrarArticulo(Articulo art){
+
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
+
+            try
+            {
+
+                query.configSqlQuery("DELETE FROM ARTICULOS WHERE Codigo = @codArt");
+                query.configSqlConexion(conexion.obtenerConexion());
+                query.configSqlParams("@codArt", art.Codigo);
+
+                conexion.abrirConexion();
+                query.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
         }
     }
 }

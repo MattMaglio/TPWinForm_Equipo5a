@@ -25,7 +25,7 @@ namespace DataPersistence
             sqlQuery.Connection = conexion;
         }
 
-        public SqlDataReader ejecutarSelect()
+        public SqlDataReader ejecutarConsulta()
         {
             if (sqlQuery.Connection == null)
             {
@@ -34,6 +34,17 @@ namespace DataPersistence
 
             SqlDataReader result = sqlQuery.ExecuteReader();
             return result;
+        }
+
+        public void ejecutarAccion()
+        {
+            if (sqlQuery.Connection == null)
+            {
+                throw new InvalidOperationException("La conexión no ha sido configurada.");
+            }
+
+            sqlQuery.ExecuteNonQuery();
+             
         }
 
         public void configSqlParams(string nombre, object valor)
