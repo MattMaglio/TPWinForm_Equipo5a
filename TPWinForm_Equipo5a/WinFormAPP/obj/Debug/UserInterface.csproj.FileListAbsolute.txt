@@ -18,3 +18,23 @@ D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\Application
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\DataPersistence.pdb
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\Model.pdb
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\UserInte.9C7395B8.Up2Date
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.exe.config
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.exe
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\WinFormAPP.pdb
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\ApplicationService.dll
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\DataPersistence.dll
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\Model.dll
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\ApplicationService.pdb
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\DataPersistence.pdb
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\Model.pdb
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\UserInterface.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtSearch.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmListArt.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmMain.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.frmArtAdd.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.Properties.Resources.resources
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\UserInterface.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\UserInterface.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\UserInte.9C7395B8.Up2Date
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.exe
+C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.pdb

@@ -197,5 +197,48 @@ namespace ApplicationService
                 conexion.cerrarConexion();
             }
         }
+
+        public void agregarArt(Articulo art)
+        {
+            DataAccess conexion = new DataAccess();  // Gestiono la conexión a la base de datos
+            DataManipulator query = new DataManipulator();  // GEstiono la ejecución de consultas
+
+            try
+            {
+                // Configuro query de inserción
+                query.configSqlQuery("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES(@codArt, @nombreArt, @descArt, @idMarca, @idCategoria, @precioArt)");
+                            
+
+
+                // Configuro conexion a DB
+                query.configSqlConexion(conexion.obtenerConexion());
+
+                // Abro conexion
+                conexion.abrirConexion();
+
+                // Parámetros de la query
+                query.configSqlParams("@codArt", art.Codigo);
+                query.configSqlParams("@nombreArt", art.Nombre);
+                query.configSqlParams("@descArt", art.Descripcion);
+                query.configSqlParams("@idMarca", art.Marca.Id);
+                query.configSqlParams("@idCategoria", art.Categoria.Id);
+                query.configSqlParams("@precioArt", art.Precio);
+
+
+                
+                query.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception("Error al insertar el artículo en la base de datos", ex);
+            }
+            finally
+            {
+                // Cierro conexion
+                conexion.cerrarConexion();
+            }
+        }
+
     }
 }
