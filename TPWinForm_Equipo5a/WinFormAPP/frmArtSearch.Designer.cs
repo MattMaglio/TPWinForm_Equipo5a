@@ -30,8 +30,8 @@
         {
             this.lbTituloArtSearch = new System.Windows.Forms.Label();
             this.btnSeachArt = new System.Windows.Forms.Button();
-            this.cbMarcaArt = new System.Windows.Forms.ComboBox();
-            this.cbCatArt = new System.Windows.Forms.ComboBox();
+            this.cboMarcaArt = new System.Windows.Forms.ComboBox();
+            this.cboCatArt = new System.Windows.Forms.ComboBox();
             this.tbPreArt = new System.Windows.Forms.TextBox();
             this.tbImgArt = new System.Windows.Forms.TextBox();
             this.tbDescArt = new System.Windows.Forms.TextBox();
@@ -45,18 +45,26 @@
             this.lbNomArt = new System.Windows.Forms.Label();
             this.lbCodArt = new System.Windows.Forms.Label();
             this.gbSearchArt = new System.Windows.Forms.GroupBox();
+            this.btnAddUrl = new System.Windows.Forms.Button();
             this.btnModArt = new System.Windows.Forms.Button();
             this.btnDeletArt = new System.Windows.Forms.Button();
-            this.dgvTest = new System.Windows.Forms.DataGridView();
+            this.dgvUrlImg = new System.Windows.Forms.DataGridView();
+            this.pbArt = new System.Windows.Forms.PictureBox();
+            this.btnDelUrl = new System.Windows.Forms.Button();
+            this.gbUrl = new System.Windows.Forms.GroupBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.gbSearchArt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrlImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
+            this.gbUrl.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTituloArtSearch
             // 
+            this.lbTituloArtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTituloArtSearch.AutoSize = true;
             this.lbTituloArtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloArtSearch.Location = new System.Drawing.Point(343, 26);
+            this.lbTituloArtSearch.Location = new System.Drawing.Point(193, 66);
             this.lbTituloArtSearch.Name = "lbTituloArtSearch";
             this.lbTituloArtSearch.Size = new System.Drawing.Size(226, 25);
             this.lbTituloArtSearch.TabIndex = 17;
@@ -64,69 +72,74 @@
             // 
             // btnSeachArt
             // 
-            this.btnSeachArt.Location = new System.Drawing.Point(423, 75);
+            this.btnSeachArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSeachArt.Location = new System.Drawing.Point(258, 114);
             this.btnSeachArt.Name = "btnSeachArt";
-            this.btnSeachArt.Size = new System.Drawing.Size(121, 31);
+            this.btnSeachArt.Size = new System.Drawing.Size(121, 25);
             this.btnSeachArt.TabIndex = 32;
             this.btnSeachArt.Text = "Buscar artículo";
             this.btnSeachArt.UseVisualStyleBackColor = true;
             this.btnSeachArt.Click += new System.EventHandler(this.btnSeachArt_Click);
             // 
-            // cbMarcaArt
+            // cboMarcaArt
             // 
-            this.cbMarcaArt.FormattingEnabled = true;
-            this.cbMarcaArt.Location = new System.Drawing.Point(109, 121);
-            this.cbMarcaArt.Name = "cbMarcaArt";
-            this.cbMarcaArt.Size = new System.Drawing.Size(179, 21);
-            this.cbMarcaArt.TabIndex = 31;
+            this.cboMarcaArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarcaArt.FormattingEnabled = true;
+            this.cboMarcaArt.Location = new System.Drawing.Point(110, 130);
+            this.cboMarcaArt.Name = "cboMarcaArt";
+            this.cboMarcaArt.Size = new System.Drawing.Size(180, 21);
+            this.cboMarcaArt.TabIndex = 31;
             // 
-            // cbCatArt
+            // cboCatArt
             // 
-            this.cbCatArt.FormattingEnabled = true;
-            this.cbCatArt.Location = new System.Drawing.Point(109, 96);
-            this.cbCatArt.Name = "cbCatArt";
-            this.cbCatArt.Size = new System.Drawing.Size(179, 21);
-            this.cbCatArt.TabIndex = 30;
+            this.cboCatArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCatArt.FormattingEnabled = true;
+            this.cboCatArt.Location = new System.Drawing.Point(110, 95);
+            this.cboCatArt.Name = "cboCatArt";
+            this.cboCatArt.Size = new System.Drawing.Size(179, 21);
+            this.cboCatArt.TabIndex = 30;
             // 
             // tbPreArt
             // 
-            this.tbPreArt.Location = new System.Drawing.Point(107, 197);
+            this.tbPreArt.Location = new System.Drawing.Point(110, 157);
             this.tbPreArt.Name = "tbPreArt";
-            this.tbPreArt.Size = new System.Drawing.Size(104, 20);
+            this.tbPreArt.Size = new System.Drawing.Size(105, 20);
             this.tbPreArt.TabIndex = 29;
             // 
             // tbImgArt
             // 
-            this.tbImgArt.Location = new System.Drawing.Point(108, 165);
+            this.tbImgArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbImgArt.Location = new System.Drawing.Point(118, 19);
             this.tbImgArt.Name = "tbImgArt";
-            this.tbImgArt.Size = new System.Drawing.Size(313, 20);
+            this.tbImgArt.Size = new System.Drawing.Size(310, 20);
             this.tbImgArt.TabIndex = 28;
             // 
             // tbDescArt
             // 
-            this.tbDescArt.Location = new System.Drawing.Point(109, 61);
+            this.tbDescArt.Location = new System.Drawing.Point(110, 60);
             this.tbDescArt.Name = "tbDescArt";
-            this.tbDescArt.Size = new System.Drawing.Size(312, 20);
+            this.tbDescArt.Size = new System.Drawing.Size(310, 20);
             this.tbDescArt.TabIndex = 27;
             // 
             // tbNomArt
             // 
-            this.tbNomArt.Location = new System.Drawing.Point(109, 28);
+            this.tbNomArt.Location = new System.Drawing.Point(110, 30);
             this.tbNomArt.Name = "tbNomArt";
             this.tbNomArt.Size = new System.Drawing.Size(179, 20);
             this.tbNomArt.TabIndex = 26;
             // 
             // tbCodArt
             // 
-            this.tbCodArt.Location = new System.Drawing.Point(300, 84);
+            this.tbCodArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbCodArt.Location = new System.Drawing.Point(152, 117);
             this.tbCodArt.Name = "tbCodArt";
-            this.tbCodArt.Size = new System.Drawing.Size(102, 20);
+            this.tbCodArt.Size = new System.Drawing.Size(100, 20);
             this.tbCodArt.TabIndex = 25;
             // 
             // lbPreArt
             // 
             this.lbPreArt.AutoSize = true;
-            this.lbPreArt.Location = new System.Drawing.Point(62, 200);
+            this.lbPreArt.Location = new System.Drawing.Point(62, 160);
             this.lbPreArt.Name = "lbPreArt";
             this.lbPreArt.Size = new System.Drawing.Size(40, 13);
             this.lbPreArt.TabIndex = 24;
@@ -134,8 +147,9 @@
             // 
             // lbImgArt
             // 
+            this.lbImgArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbImgArt.AutoSize = true;
-            this.lbImgArt.Location = new System.Drawing.Point(17, 165);
+            this.lbImgArt.Location = new System.Drawing.Point(27, 22);
             this.lbImgArt.Name = "lbImgArt";
             this.lbImgArt.Size = new System.Drawing.Size(85, 13);
             this.lbImgArt.TabIndex = 23;
@@ -162,7 +176,7 @@
             // lbDescArt
             // 
             this.lbDescArt.AutoSize = true;
-            this.lbDescArt.Location = new System.Drawing.Point(36, 64);
+            this.lbDescArt.Location = new System.Drawing.Point(36, 61);
             this.lbDescArt.Name = "lbDescArt";
             this.lbDescArt.Size = new System.Drawing.Size(66, 13);
             this.lbDescArt.TabIndex = 20;
@@ -171,7 +185,7 @@
             // lbNomArt
             // 
             this.lbNomArt.AutoSize = true;
-            this.lbNomArt.Location = new System.Drawing.Point(55, 31);
+            this.lbNomArt.Location = new System.Drawing.Point(55, 30);
             this.lbNomArt.Name = "lbNomArt";
             this.lbNomArt.Size = new System.Drawing.Size(47, 13);
             this.lbNomArt.TabIndex = 19;
@@ -179,8 +193,9 @@
             // 
             // lbCodArt
             // 
+            this.lbCodArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCodArt.AutoSize = true;
-            this.lbCodArt.Location = new System.Drawing.Point(197, 84);
+            this.lbCodArt.Location = new System.Drawing.Point(50, 120);
             this.lbCodArt.Name = "lbCodArt";
             this.lbCodArt.Size = new System.Drawing.Size(96, 13);
             this.lbCodArt.TabIndex = 18;
@@ -188,58 +203,123 @@
             // 
             // gbSearchArt
             // 
+            this.gbSearchArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbSearchArt.Controls.Add(this.lbNomArt);
             this.gbSearchArt.Controls.Add(this.lbDescArt);
-            this.gbSearchArt.Controls.Add(this.cbMarcaArt);
+            this.gbSearchArt.Controls.Add(this.cboMarcaArt);
             this.gbSearchArt.Controls.Add(this.lbMarcaArt);
-            this.gbSearchArt.Controls.Add(this.cbCatArt);
+            this.gbSearchArt.Controls.Add(this.cboCatArt);
             this.gbSearchArt.Controls.Add(this.lbCatArt);
             this.gbSearchArt.Controls.Add(this.tbPreArt);
-            this.gbSearchArt.Controls.Add(this.lbImgArt);
-            this.gbSearchArt.Controls.Add(this.tbImgArt);
             this.gbSearchArt.Controls.Add(this.lbPreArt);
             this.gbSearchArt.Controls.Add(this.tbDescArt);
             this.gbSearchArt.Controls.Add(this.tbNomArt);
-            this.gbSearchArt.Location = new System.Drawing.Point(195, 112);
+            this.gbSearchArt.Location = new System.Drawing.Point(50, 180);
             this.gbSearchArt.Name = "gbSearchArt";
-            this.gbSearchArt.Size = new System.Drawing.Size(549, 236);
+            this.gbSearchArt.Size = new System.Drawing.Size(500, 191);
             this.gbSearchArt.TabIndex = 33;
             this.gbSearchArt.TabStop = false;
             this.gbSearchArt.Text = "Articulo:";
             // 
+            // btnAddUrl
+            // 
+            this.btnAddUrl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddUrl.Location = new System.Drawing.Point(118, 45);
+            this.btnAddUrl.Name = "btnAddUrl";
+            this.btnAddUrl.Size = new System.Drawing.Size(68, 23);
+            this.btnAddUrl.TabIndex = 32;
+            this.btnAddUrl.Text = "Add URL";
+            this.btnAddUrl.UseVisualStyleBackColor = true;
+            this.btnAddUrl.Click += new System.EventHandler(this.btnAddUrl_Click);
+            // 
             // btnModArt
             // 
-            this.btnModArt.Location = new System.Drawing.Point(317, 354);
+            this.btnModArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModArt.Location = new System.Drawing.Point(56, 143);
             this.btnModArt.Name = "btnModArt";
             this.btnModArt.Size = new System.Drawing.Size(121, 31);
             this.btnModArt.TabIndex = 34;
             this.btnModArt.Text = "Modificar artículo";
             this.btnModArt.UseVisualStyleBackColor = true;
+            this.btnModArt.Click += new System.EventHandler(this.btnModArt_Click);
             // 
             // btnDeletArt
             // 
-            this.btnDeletArt.Location = new System.Drawing.Point(459, 354);
+            this.btnDeletArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeletArt.Location = new System.Drawing.Point(183, 143);
             this.btnDeletArt.Name = "btnDeletArt";
             this.btnDeletArt.Size = new System.Drawing.Size(121, 31);
             this.btnDeletArt.TabIndex = 35;
             this.btnDeletArt.Text = "Eliminar artículo";
             this.btnDeletArt.UseVisualStyleBackColor = true;
+            this.btnDeletArt.Click += new System.EventHandler(this.btnDeletArt_Click);
             // 
-            // dgvTest
+            // dgvUrlImg
             // 
-            this.dgvTest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTest.Location = new System.Drawing.Point(148, 414);
-            this.dgvTest.Name = "dgvTest";
-            this.dgvTest.Size = new System.Drawing.Size(636, 169);
-            this.dgvTest.TabIndex = 36;
+            this.dgvUrlImg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvUrlImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrlImg.Location = new System.Drawing.Point(6, 74);
+            this.dgvUrlImg.Name = "dgvUrlImg";
+            this.dgvUrlImg.Size = new System.Drawing.Size(240, 240);
+            this.dgvUrlImg.TabIndex = 36;
+            this.dgvUrlImg.SelectionChanged += new System.EventHandler(this.dgvUrlImg_SelectionChanged);
+            // 
+            // pbArt
+            // 
+            this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbArt.Location = new System.Drawing.Point(254, 74);
+            this.pbArt.Name = "pbArt";
+            this.pbArt.Size = new System.Drawing.Size(240, 240);
+            this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbArt.TabIndex = 37;
+            this.pbArt.TabStop = false;
+            // 
+            // btnDelUrl
+            // 
+            this.btnDelUrl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelUrl.Location = new System.Drawing.Point(192, 45);
+            this.btnDelUrl.Name = "btnDelUrl";
+            this.btnDelUrl.Size = new System.Drawing.Size(68, 23);
+            this.btnDelUrl.TabIndex = 33;
+            this.btnDelUrl.Text = "Del URL";
+            this.btnDelUrl.UseVisualStyleBackColor = true;
+            this.btnDelUrl.Click += new System.EventHandler(this.btnDelUrl_Click);
+            // 
+            // gbUrl
+            // 
+            this.gbUrl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbUrl.Controls.Add(this.lbImgArt);
+            this.gbUrl.Controls.Add(this.dgvUrlImg);
+            this.gbUrl.Controls.Add(this.pbArt);
+            this.gbUrl.Controls.Add(this.btnAddUrl);
+            this.gbUrl.Controls.Add(this.tbImgArt);
+            this.gbUrl.Controls.Add(this.btnDelUrl);
+            this.gbUrl.Location = new System.Drawing.Point(50, 377);
+            this.gbUrl.Name = "gbUrl";
+            this.gbUrl.Size = new System.Drawing.Size(500, 320);
+            this.gbUrl.TabIndex = 38;
+            this.gbUrl.TabStop = false;
+            this.gbUrl.Text = "Lista de Imagenes por Articulo";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.Location = new System.Drawing.Point(56, 703);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(121, 36);
+            this.btnGuardar.TabIndex = 39;
+            this.btnGuardar.Text = "Guardar cambios";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmArtSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 681);
+            this.ClientSize = new System.Drawing.Size(584, 761);
             this.ControlBox = false;
-            this.Controls.Add(this.dgvTest);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.gbUrl);
             this.Controls.Add(this.btnDeletArt);
             this.Controls.Add(this.btnModArt);
             this.Controls.Add(this.gbSearchArt);
@@ -249,9 +329,13 @@
             this.Controls.Add(this.lbTituloArtSearch);
             this.Name = "frmArtSearch";
             this.Text = "frmArtSearch";
+            this.Load += new System.EventHandler(this.frmArtSearch_Load);
             this.gbSearchArt.ResumeLayout(false);
             this.gbSearchArt.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrlImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArt)).EndInit();
+            this.gbUrl.ResumeLayout(false);
+            this.gbUrl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,8 +345,8 @@
 
         private System.Windows.Forms.Label lbTituloArtSearch;
         private System.Windows.Forms.Button btnSeachArt;
-        private System.Windows.Forms.ComboBox cbMarcaArt;
-        private System.Windows.Forms.ComboBox cbCatArt;
+        private System.Windows.Forms.ComboBox cboMarcaArt;
+        private System.Windows.Forms.ComboBox cboCatArt;
         private System.Windows.Forms.TextBox tbPreArt;
         private System.Windows.Forms.TextBox tbImgArt;
         private System.Windows.Forms.TextBox tbDescArt;
@@ -278,6 +362,11 @@
         private System.Windows.Forms.GroupBox gbSearchArt;
         private System.Windows.Forms.Button btnModArt;
         private System.Windows.Forms.Button btnDeletArt;
-        private System.Windows.Forms.DataGridView dgvTest;
+        private System.Windows.Forms.DataGridView dgvUrlImg;
+        private System.Windows.Forms.PictureBox pbArt;
+        private System.Windows.Forms.Button btnAddUrl;
+        private System.Windows.Forms.Button btnDelUrl;
+        private System.Windows.Forms.GroupBox gbUrl;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

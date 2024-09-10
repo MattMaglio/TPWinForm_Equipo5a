@@ -21,23 +21,15 @@ namespace WinFormAPP
 
         private void frmArtAdd_Load(object sender, EventArgs e)
         {
-            /*
             MarcaAS marca = new MarcaAS();
-            cbMarcaArt.DataSource = marca.listar();
-            */
+            CategoriaAS categoria = new CategoriaAS();
+
+            cboMarcaArt.DataSource = marca.listar();
+            cboCatArt.DataSource = categoria.listar();
         }
 
         private void btnAddArt_Click(object sender, EventArgs e)
         {
-            /*
-            Articulo NuevoArt = new Articulo();
-            ArticuloAS NuevoArtAS = new ArticuloAS();
-
-            NuevoArt.Codigo = tbCodArt.Text;
-            //
-            //
-            NuevoArtAS.insertarArt(NuevoArt);
-            */
 
         }
 
