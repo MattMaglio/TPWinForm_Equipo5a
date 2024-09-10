@@ -25,7 +25,7 @@ namespace ApplicationService
                 query.configSqlConexion(conexion.obtenerConexion());
 
                 conexion.abrirConexion();
-                result = query.ejecutarSelect();
+                result = query.ejecutarConsulta();
 
                 while (result.Read())
                 {
