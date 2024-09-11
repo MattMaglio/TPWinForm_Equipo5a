@@ -71,7 +71,7 @@ namespace ApplicationService
             try
             {
 
-                query.configSqlQuery("SELECT i.Id, i.IdArticulo, i.ImagenUrl FROM ARTICULOS a LEFT JOIN IMAGENES i ON i.IdArticulo = a.Id WHERE Codigo = @codArt");
+                query.configSqlQuery("SELECT i.Id, I.IdArticulo, i.ImagenUrl FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo WHERE Codigo = @codArt");
                 query.configSqlParams("@codArt", codFiltrado);
                 query.configSqlConexion(conexion.obtenerConexion());
 
@@ -80,12 +80,16 @@ namespace ApplicationService
 
                 while (result.Read())
                 {
-                    Imagen auxMarca = new Imagen();
-                    auxMarca.Id = (int)result["Id"];
-                    auxMarca.IdArticulo = (int)result["IdArticulo"];
-                    auxMarca.ImagenUrl = (string)result["ImagenUrl"];
+                    Imagen auxImg = new Imagen();
 
-                    lista.Add(auxMarca);
+                    
+                    auxImg.IdArticulo = (int)result["IdArticulo"];
+                    auxImg.Id = (int)result["Id"];
+                    auxImg.ImagenUrl = (string)result["ImagenUrl"];
+                        
+                    lista.Add(auxImg);
+                    
+
                 }
 
                 return lista;
@@ -118,12 +122,13 @@ namespace ApplicationService
 
                 while (result.Read())
                 {
-                    Imagen auxMarca = new Imagen();
-                    auxMarca.Id = (int)result["Id"];
-                    auxMarca.IdArticulo = (int)result["IdArticulo"];
-                    auxMarca.ImagenUrl = (string)result["ImagenUrl"];
+                    Imagen auxImg = new Imagen();
+                    auxImg.Id = (int)result["Id"];
+                    auxImg.IdArticulo = (int)result["IdArticulo"];
+                    auxImg.ImagenUrl = (string)result["ImagenUrl"];
 
-                    lista.Add(auxMarca);
+
+                    lista.Add(auxImg);
                 }
 
                 return lista;

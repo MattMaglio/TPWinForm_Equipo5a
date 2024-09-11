@@ -28,9 +28,10 @@
               "RelativeDocumentMoniker": "WinFormAPP\\frmListArt.cs",
               "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs*",
               "RelativeToolTip": "WinFormAPP\\frmListArt.cs*",
-              "ViewState": "AgIAAC8AAAAAAAAAAIA6wD8AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAMwKcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T00:01:33.531Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -43,6 +44,7 @@
               "RelativeToolTip": "WinFormAPP\\frmListArt.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T00:01:27.77Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
             }
           ]

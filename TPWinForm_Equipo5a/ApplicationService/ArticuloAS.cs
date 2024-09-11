@@ -198,6 +198,34 @@ namespace ApplicationService
             }
         }
 
+        public void eliminar(int id)
+        {
+            DataAccess datos = new DataAccess();
+            try
+            {
+                // Configura el comando para eliminar
+                using (SqlCommand comando = new SqlCommand("DELETE FROM ARTICULOS WHERE Id = @id", datos.obtenerConexion()))
+                {
+                    // Agrega el parámetro al comando
+                    comando.Parameters.AddWithValue("@id", id);
+
+                    // Abre la conexión
+                    datos.abrirConexion();
+
+                    // Ejecuta el comando
+                    comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public void agregarArt(Articulo art)
         {
             DataAccess conexion = new DataAccess();  // Gestiono la conexión a la base de datos
