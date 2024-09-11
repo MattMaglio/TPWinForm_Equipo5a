@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmlistart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|d:\\github\\tpwinform_equipo5a\\tpwinform_equipo5a\\winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{590F9335-C248-4B25-A10D-4C7A4A7640DB}|WinFormAPP\\UserInterface.csproj|solutionrelative:winformapp\\frmartsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmListArt.cs",
               "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
               "RelativeDocumentMoniker": "WinFormAPP\\frmListArt.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs*",
-              "RelativeToolTip": "WinFormAPP\\frmListArt.cs*",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAMwKcAAAALAAAAAAAAAA==",
+              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
+              "RelativeToolTip": "WinFormAPP\\frmListArt.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAswB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T00:01:33.531Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-09-11T00:37:16.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmListArt.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs",
               "RelativeDocumentMoniker": "WinFormAPP\\frmListArt.cs",
-              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs [Design]*",
-              "RelativeToolTip": "WinFormAPP\\frmListArt.cs [Design]*",
+              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs [Design]",
+              "RelativeToolTip": "WinFormAPP\\frmListArt.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T00:01:27.77Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-09-11T00:37:13.028Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmArtSearch.cs",
+              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
+              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
+              "RelativeToolTip": "WinFormAPP\\frmArtSearch.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAmwIwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T00:30:04.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmArtSearch.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs",
+              "RelativeDocumentMoniker": "WinFormAPP\\frmArtSearch.cs",
+              "ToolTip": "D:\\GitHub\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmArtSearch.cs [Design]",
+              "RelativeToolTip": "WinFormAPP\\frmArtSearch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T00:12:50.308Z",
               "EditorCaption": " [Design]"
             }
           ]

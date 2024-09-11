@@ -139,7 +139,70 @@ namespace ApplicationService
             }
 
         }
-        
+
+        public List<Articulo> listarFrmListado()
+        {
+            List<Articulo> lista = new List<Articulo>();
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
+            SqlDataReader result;
+
+
+            try
+            {
+
+                query.configSqlQuery("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.IdMarca, a.IdCategoria, " +
+                    "a.Precio, i.IdArticulo, i.ImagenUrl FROM ARTICULOS a JOIN IMAGENES i ON a.Id = i.IdArticulo");
+                query.configSqlConexion(conexion.obtenerConexion());
+
+                conexion.abrirConexion();
+                result = query.ejecutarConsulta();
+
+                while (result.Read())
+                {
+                    Articulo auxArt = new Articulo();
+
+                    auxArt.Id = (int)result["Id"];
+                    auxArt.Codigo = (string)result["Codigo"];
+                    auxArt.Nombre = (string)result["Nombre"];
+                    auxArt.Descripcion = (string)result["Descripcion"];
+                    auxArt.Precio = (decimal)result["Precio"];
+
+                    auxArt.Marca = new Marca();
+                    auxArt.Marca.Id = (int)result["IdMarca"];
+
+                    auxArt.Categoria = new Categoria();
+                    auxArt.Categoria.Id = (int)result["IdCategoria"];
+
+                    // traigo datos de la tabla imagenes
+                    auxArt.Imagen = new Imagen();
+                    if (!(result["IdArticulo"] is DBNull))
+                    {
+                        auxArt.Imagen.IdArticulo = (int)result["IdArticulo"];
+                    }
+                    if (!(result["ImagenUrl"] is DBNull))
+                    {
+                        auxArt.Imagen.ImagenUrl = (string)result["ImagenUrl"];
+                    }
+
+
+
+                    lista.Add(auxArt);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+
+        }
+
         public void actualizarArticulo(Articulo art)
         {
             DataAccess conexion = new DataAccess();

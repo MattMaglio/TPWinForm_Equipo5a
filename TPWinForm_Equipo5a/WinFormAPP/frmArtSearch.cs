@@ -40,6 +40,8 @@ namespace WinFormAPP
 
             listUrl = img.listarFiltrado(tbCodArt.Text);
             dgvUrlImg.DataSource = listUrl;
+            dgvUrlImg.Columns["Id"].Visible = false;
+            dgvUrlImg.Columns["IdArticulo"].Visible = false;
             cargarImagen(listUrl[0].ImagenUrl);
         }
 
@@ -67,6 +69,8 @@ namespace WinFormAPP
             btnAddUrl.Enabled = false;
             btnDelUrl.Enabled = false;
             btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            btnCancelar.Enabled = false;
         }
 
         public void cargarFormularioEnable()
@@ -94,6 +98,8 @@ namespace WinFormAPP
             btnDelUrl.Enabled = true;
             btnGuardar.Visible = true;
             btnGuardar.Enabled = true;
+            btnCancelar.Visible = true;
+            btnCancelar.Enabled = true;
         }
 
         private void cargarImagen(string img)
@@ -130,9 +136,14 @@ namespace WinFormAPP
 
         private void dgvUrlImg_SelectionChanged(object sender, EventArgs e)
         {
-            img = (Imagen)dgvUrlImg.CurrentRow.DataBoundItem;
-            cargarImagen(img.ImagenUrl);
-            tbImgArt.Text = img.ImagenUrl;
+            if (dgvUrlImg.CurrentRow != null)
+            {
+                dgvUrlImg.CurrentRow.Cells[0].Selected = true;
+                
+                img = (Imagen)dgvUrlImg.CurrentRow.DataBoundItem;
+                cargarImagen(img.ImagenUrl);
+                tbImgArt.Text = img.ImagenUrl;
+            }
         }
 
         private void btnModArt_Click(object sender, EventArgs e)
@@ -227,6 +238,11 @@ namespace WinFormAPP
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnCanelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

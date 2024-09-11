@@ -53,6 +53,7 @@
             this.btnDelUrl = new System.Windows.Forms.Button();
             this.gbUrl = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbSearchArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrlImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
@@ -312,12 +313,24 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.Location = new System.Drawing.Point(198, 703);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(121, 36);
+            this.btnCancelar.TabIndex = 40;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCanelar_Click);
+            // 
             // frmArtSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 761);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gbUrl);
             this.Controls.Add(this.btnDeletArt);
@@ -368,5 +381,6 @@
         private System.Windows.Forms.Button btnDelUrl;
         private System.Windows.Forms.GroupBox gbUrl;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ApplicationService;
 using DataPersistence;
+using System.Text.RegularExpressions;
 
 
 namespace WinFormAPP
@@ -29,6 +30,7 @@ namespace WinFormAPP
             cboCategoria.Items.Add("Televisor");
             cboCategoria.Items.Add("Telefono");
             cboCategoria.Items.Add("Consola");
+            
 
 
         }
@@ -58,7 +60,7 @@ namespace WinFormAPP
         private void cargar()
         {
             ArticuloAS artAS = new ArticuloAS();
-            listArt = artAS.listar();
+            listArt = artAS.listarFrmListado();
             dgvArt.DataSource = listArt;
             ocultarColumnas();
             pboxImagenUrl.Load(listArt[0].Imagen.ImagenUrl);
@@ -67,18 +69,11 @@ namespace WinFormAPP
         }
         private void ocultarColumnas()
         {
-            // dgvArt.Columns["IdMarca"].Visible = false;
-            // dgvArt.Columns["IdCategoria"].Visible = false;
-            //dgvArt.Columns["Id"].Visible = false;
-            if (dgvArt.Columns["ImagenUrl"] != null)
-            {
-                dgvArt.Columns["ImagenUrl"].Visible = false;
-            }
+            dgvArt.Columns["Id"].Visible = false;
+            dgvArt.Columns["Marca"].Visible = false;
+            dgvArt.Columns["Categoria"].Visible = false;
+            dgvArt.Columns["Imagen"].Visible = false;
 
-            /*  else
-              {
-                  MessageBox.Show("La columna 'ImagenUrl' no está presente en el DataGridView.");
-              }*/
         }
 
         public void cargarImagenUrl(string imagen)
