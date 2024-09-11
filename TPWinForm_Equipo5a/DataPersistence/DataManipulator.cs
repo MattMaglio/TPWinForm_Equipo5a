@@ -7,7 +7,10 @@ namespace DataPersistence
     {
         public SqlCommand sqlQuery { get; set; }
 
-
+        public DataManipulator()
+        {
+            sqlQuery = new SqlCommand();
+        }
 
         public void configSqlQuery(string query)
         {
@@ -50,6 +53,12 @@ namespace DataPersistence
 
         public void configSqlParams(string nombre, object valor)
         {
+            if (sqlQuery == null)
+            {
+                throw new InvalidOperationException("sqlQuery no está inicializado.");
+            }
+
+         
             sqlQuery.Parameters.AddWithValue(nombre, valor);
         }
 

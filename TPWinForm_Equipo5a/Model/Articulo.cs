@@ -24,5 +24,6 @@ namespace Model
         public Categoria Categoria { get; set; }
         public Marca Marca { get; set; }
 
+
     }
 }

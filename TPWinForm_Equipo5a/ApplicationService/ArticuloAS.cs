@@ -331,5 +331,148 @@ namespace ApplicationService
             }
         }
 
+        /*public List<Articulo> listaFiltrada (string categoria, string marca)
+        {
+            List<Articulo> listaArtFiltrados = new List<Articulo>();
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
+            SqlDataReader result;
+
+            try
+            {   //OBTENGO LA CONSULTA
+               string queryConsulta = @"SELECT a.id, a.Nombre, c.Descripcion AS Categoria, m.Descripcion AS Marca FROM ARTICULOS a JOIN CATEGORIAS c ON a.Id = c.Id JOIN MARCAS m ON a.Id = m.Id WHERE 1=1";
+               
+                //filtros para cuando eliga categoria y/o mara agrege esa consulta adicional
+                /*if (!string.IsNullOrEmpty(categoria))
+                {
+                    queryConsulta += " AND c.Descripcion = @Descripcion";
+                }
+                if (!string.IsNullOrEmpty(marca))
+                {
+                    queryConsulta += " AND m.Descripcion = @Descripcion";
+                }*/
+               /* if(!string.IsNullOrEmpty(categoria))
+{
+                    queryConsulta += " AND a.IdCategoria = @IdCategoria"; // Filtrar por Id de la categoría
+                    //query.configSqlParametro("@IdCategoria", categoria);  // Asigna el valor del parámetro
+                }
+                if (!string.IsNullOrEmpty(marca))
+                {
+                    queryConsulta += " AND a.IdMarca = @IdMarca"; // Filtrar por Id de la marca
+                    //query.configSqlParametro("@IdMarca", marca);  // Asigna el valor del parámetro
+                }
+                query.configSqlQuery(queryConsulta);
+                query.configSqlConexion(conexion.obtenerConexion());
+
+
+                conexion.abrirConexion();
+                result = query.ejecutarConsulta();
+                while (result.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.Id = (int)result["Id"];
+                    aux.Nombre = (string)result["Nombre"];
+                    aux.Marca.Descripcion = (string)result["Descripcion"];
+                    aux.Categoria.Descripcion = (string)result["Descripcion"];
+
+                    listaArtFiltrados.Add(aux);
+                }
+                return listaArtFiltrados;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }*/
+        public List<Articulo> buscarArt(string categoria, string marca)
+        {
+
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
+
+            List<Articulo> lista = new List<Articulo>();
+            Articulo auxArt = new Articulo();
+            SqlDataReader result;
+
+
+            try
+            {
+
+                
+                string queryConsulta = "SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Id AS 'Id Marca', m.Descripcion AS 'Marca', c.Id AS 'Id Categoria', c.Descripcion AS 'Categoria', a.Precio FROM ARTICULOS a LEFT JOIN MARCAS m ON m.Id = a.IdMarca LEFT JOIN CATEGORIAS c ON c.Id = a.IdCategoria where 1= 1  ";
+
+                //FILTROS PARA AGREGAR CUANDO SELECCIONA LOS CBO
+                if (!string.IsNullOrEmpty(categoria))
+                {
+                    queryConsulta += " AND c.Descripcion = @Categoria";
+                    query.configSqlParams("@Categoria", categoria);
+                }
+
+                if (!string.IsNullOrEmpty(marca))
+                {
+                    queryConsulta += " AND m.Descripcion = @Marca";
+                    query.configSqlParams("@Marca", marca);
+                }
+                query.configSqlQuery(queryConsulta);
+
+                query.configSqlConexion(conexion.obtenerConexion());
+
+                conexion.abrirConexion();
+                result = query.ejecutarConsulta();
+
+
+
+                while (result.Read())
+                {
+                    auxArt.Id = (int)result["Id"];
+                    auxArt.Codigo = (string)result["Codigo"];
+                    auxArt.Nombre = (string)result["Nombre"];
+                    auxArt.Descripcion = (string)result["Descripcion"];
+                    auxArt.Marca = new Marca();
+                    if (!(result["Id Marca"] is DBNull))
+                    {
+                        auxArt.Marca.Id = (int)result["Id Marca"];
+                        auxArt.Marca.Descripcion = (string)result["Marca"];
+                    }
+                    else
+                    {
+                        auxArt.Marca.Descripcion = "Sin marca";
+                    }
+                    auxArt.Categoria = new Categoria();
+                    if (!(result["Id Categoria"] is DBNull))
+                    {
+                        auxArt.Categoria.Id = (int)result["Id Categoria"];
+                        auxArt.Categoria.Descripcion = (string)result["Categoria"];
+                    }
+                    else
+                    {
+                        auxArt.Categoria.Descripcion = "Sin categoria";
+                    }
+
+                    auxArt.Precio = (decimal)result["Precio"];
+
+
+                    lista.Add(auxArt);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+
+            return lista;
+        }
+
     }
 }

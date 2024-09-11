@@ -10,3 +10,9 @@ C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.dll
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.pdb
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\bin\Debug\Model.dll
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\bin\Debug\Model.pdb
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.dll
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\Model\obj\Debug\Model.pdb

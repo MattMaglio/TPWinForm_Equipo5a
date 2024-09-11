@@ -19,7 +19,8 @@ using System.Text.RegularExpressions;
 namespace WinFormAPP
 {
     public partial class frmArtSearch : Form
-    {   
+    {
+        private Articulo articulo = null; // Lo utilizo para el constructor
         private List<Imagen> listUrl;
         private Articulo art = null;
         private Imagen img = null;
@@ -27,6 +28,12 @@ namespace WinFormAPP
         {
             InitializeComponent();
         }
+        public frmArtSearch(Articulo articulo)// Duplico el constructor para utilizar la ventana en boton mod
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+        }
+
 
         public void cargarArticuloBuscado()
         {
@@ -108,7 +115,7 @@ namespace WinFormAPP
             {
                 pbArt.Load(img);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pbArt.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gpZSb_Y8zMJevdd9E2ZxI4doS3D4BMsus5ltKAyKydLH-zxnGIQQ3Dx7sNWcnZvFea4&usqp=CAU");
             }

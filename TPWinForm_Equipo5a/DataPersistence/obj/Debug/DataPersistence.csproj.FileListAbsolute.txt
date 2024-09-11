@@ -10,3 +10,9 @@ C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.csproj.CoreCompileInputs.cache
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.dll
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.pdb
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\bin\Debug\DataPersistence.dll
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\bin\Debug\DataPersistence.pdb
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.dll
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\DataPersistence\obj\Debug\DataPersistence.pdb
