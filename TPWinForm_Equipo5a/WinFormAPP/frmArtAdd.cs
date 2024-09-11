@@ -31,6 +31,10 @@ namespace WinFormAPP
             {
             cboMarcaArt.DataSource = marca.listar();
             cboCatArt.DataSource = categoria.listar();
+            cboCatArt.ValueMember = "Id";
+            cboCatArt.DisplayMember = "Descripcion";
+            cboMarcaArt.ValueMember = "Id";
+            cboMarcaArt.DisplayMember = "Descripcion";
 
             }
             catch (Exception ex)
@@ -67,16 +71,17 @@ namespace WinFormAPP
                 artAS.agregarArt(art);
                 MessageBox.Show("Artículo agregado exitosamente");
 
+            // OBTENER EL ID DEL OBJ ART PARA PASARLO AL OBJ IMAGEN. 
 
             // Verifico si se ingresó URL de Img
                 if (!string.IsNullOrWhiteSpace(tbImgArt.Text))
                 {
-                    Imagen img = new Imagen
-                    {
-                        IdArticulo = art.Id, 
-                        ImagenUrl = tbImgArt.Text
-                    };
+                    Imagen img = new Imagen();
 
+                    img.IdArticulo = art.Id;
+                    img.ImagenUrl = tbImgArt.Text.ToString();
+                    
+                    
                     // Agrego la imagen
                     imgAS.agregarImagen(img);
                     

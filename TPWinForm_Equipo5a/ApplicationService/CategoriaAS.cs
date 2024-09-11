@@ -23,7 +23,7 @@ namespace ApplicationService
                 query.configSqlQuery("Select id, descripcion from Categorias");
                 query.configSqlConexion(data.obtenerConexion());
                 data.abrirConexion();
-                result = query.ejecutarSelect();
+                result = query.ejecutarConsulta();
                 while (result.Read())
                 {
                     Categoria aux = new Categoria();

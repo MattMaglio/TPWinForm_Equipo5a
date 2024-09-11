@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ApplicationService;
 using DataPersistence;
+using System.Text.RegularExpressions;
 
 
 namespace WinFormAPP
 {
     public partial class frmListArt : Form
     {
-        private List<Articulo> listArt;    
+        private List<Articulo> listArt;
         public frmListArt()
         {
             InitializeComponent();
@@ -29,7 +30,8 @@ namespace WinFormAPP
             cboCategoria.Items.Add("Televisor");
             cboCategoria.Items.Add("Telefono");
             cboCategoria.Items.Add("Consola");
-           
+            
+
 
         }
 
@@ -58,29 +60,22 @@ namespace WinFormAPP
         private void cargar()
         {
             ArticuloAS artAS = new ArticuloAS();
-            listArt = artAS.listar();
+            listArt = artAS.listarFrmListado();
             dgvArt.DataSource = listArt;
             ocultarColumnas();
             pboxImagenUrl.Load(listArt[0].Imagen.ImagenUrl);
-            
+
 
         }
-        private void  ocultarColumnas()
+        private void ocultarColumnas()
         {
-           // dgvArt.Columns["IdMarca"].Visible = false;
-           // dgvArt.Columns["IdCategoria"].Visible = false;
-            //dgvArt.Columns["Id"].Visible = false;
-            if (dgvArt.Columns["ImagenUrl"]!= null)
-            {
-                dgvArt.Columns["ImagenUrl"].Visible = false;
-            }
+            dgvArt.Columns["Id"].Visible = false;
+            dgvArt.Columns["Marca"].Visible = false;
+            dgvArt.Columns["Categoria"].Visible = false;
+            dgvArt.Columns["Imagen"].Visible = false;
 
-          /*  else
-            {
-                MessageBox.Show("La columna 'ImagenUrl' no está presente en el DataGridView.");
-            }*/
         }
-         
+
         public void cargarImagenUrl(string imagen)
         {
             try
@@ -98,7 +93,7 @@ namespace WinFormAPP
             }
 
         }
-        
+
 
         private void dgvArt_SelectionChanged(object sender, EventArgs e)
         {
@@ -126,16 +121,16 @@ namespace WinFormAPP
                     cargarImagenUrl("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
                 }
             }
-           
+
         }
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
-            if(dgvArt.CurrentRow != null)
+            if (dgvArt.CurrentRow != null)
             {
                 Articulo articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
                 DialogResult respuesta = MessageBox.Show("¿Desea eliminar?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta  == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
 
                     try
@@ -155,16 +150,16 @@ namespace WinFormAPP
             {
                 MessageBox.Show("Seleccionar un artículo para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
-        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        /*private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
             Articulo articulo;
             articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
             frmArtAdd modificar = new frmArtAdd(articulo);
             modificar.ShowDialog();
 
-        }
+        }*/
     }
 }
