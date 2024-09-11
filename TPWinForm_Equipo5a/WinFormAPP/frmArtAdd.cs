@@ -16,9 +16,42 @@ namespace WinFormAPP
 {
     public partial class frmArtAdd : Form
     {
+        private Articulo articulo = null; // variable que utilizo para el pasaje entre ventanas
+        private bool modoVerDetalle = false;
         public frmArtAdd()
         {
             InitializeComponent();
+        }
+        public frmArtAdd(Articulo articulo ,bool modoVerDetalle)// Duplico para utilizar la ventana de ver detalle
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            if (modoVerDetalle)// si es modo ver detalle articulo
+            {
+                lbTituloArtAltas.Text = "Detalle articulo";
+                btnAddArt.Visible = false;
+                foreach (Control control in this.Controls)
+                {
+                  if (control is TextBox)
+                  {
+                    ((TextBox)control).Enabled = false;
+                  }else if(control is ComboBox) {
+                    ((ComboBox)control).Enabled = false;
+                  }
+                }
+                //CENTRAMOS BOTON CANCELAR EN MODO VER DETALLE
+                btnCancelAdd.Left = (this.ClientSize.Width - btnCancelAdd.Width) / 2;
+                btnCancelAdd.Top = (this.ClientSize.Height - btnCancelAdd.Height) / 2+120;
+
+                lbExitoArtAdd.Visible = false;
+                
+            }
+            else
+            {
+                lbTituloArtAltas.Text = "Agregar articulo";
+            }
+
+
         }
 
         private void frmArtAdd_Load(object sender, EventArgs e)
@@ -29,12 +62,23 @@ namespace WinFormAPP
 
             try
             {
-            cboMarcaArt.DataSource = marca.listar();
-            cboCatArt.DataSource = categoria.listar();
-            cboCatArt.ValueMember = "Id";
-            cboCatArt.DisplayMember = "Descripcion";
-            cboMarcaArt.ValueMember = "Id";
-            cboMarcaArt.DisplayMember = "Descripcion";
+
+                cboMarcaArt.DataSource = marca.listar();
+                cboCatArt.DataSource = categoria.listar();
+                if(articulo != null)// Desde el if para manipular la ventana agregar desde el boton ver detalle articulo
+                {
+                    tbCodArt.Text = articulo.Codigo;
+                    tbNomArt.Text = articulo.Nombre;
+                    tbDescArt.Text = articulo.Descripcion;
+                    tbPreArt.Text = articulo.Precio.ToString();
+
+                    cboCatArt.ValueMember = "Id";
+                    cboCatArt.DisplayMember = "Descripcion";
+                    cboMarcaArt.ValueMember = "Id";
+                    cboMarcaArt.DisplayMember = "Descripcion";
+                    cargarImagen(articulo.Imagen.ImagenUrl);
+
+                }
 
             }
             catch (Exception ex)
@@ -42,10 +86,7 @@ namespace WinFormAPP
 
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        
-       
+        } 
 
         private void btnAddArt_Click(object sender, EventArgs e)
         {
@@ -104,7 +145,7 @@ namespace WinFormAPP
             catch (Exception)
             {
 
-                pbArt.Load("https://picsum.photos/id/870/536/354?grayscale&blur=2");
+                pbArt.Load("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
             }
         }
         private void btnCancelAdd_Click(object sender, EventArgs e)
