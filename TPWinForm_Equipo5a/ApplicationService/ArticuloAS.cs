@@ -392,7 +392,8 @@ namespace ApplicationService
          conexion.cerrarConexion();
      }
  }*/
-        public List<Articulo> buscarArt(string categoria, string marca)
+        
+        /*public List<Articulo> buscarArt(string categoria, string marca)
         {
 
             DataAccess conexion = new DataAccess();
@@ -405,22 +406,36 @@ namespace ApplicationService
 
             try
             {
-
-                
-                string queryConsulta = "SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, m.Id AS 'Id Marca', m.Descripcion AS 'Marca', c.Id AS 'Id Categoria', c.Descripcion AS 'Categoria', a.Precio FROM ARTICULOS a LEFT JOIN MARCAS m ON m.Id = a.IdMarca LEFT JOIN CATEGORIAS c ON c.Id = a.IdCategoria where 1= 1  ";
-
-                //FILTROS PARA AGREGAR CUANDO SELECCIONA LOS CBO
-                if (!string.IsNullOrEmpty(categoria))
+                /*if (categoria != null && marca != null)
                 {
-                    queryConsulta += " AND c.Descripcion = @Categoria";
-                    query.configSqlParams("@Categoria", categoria);
+
                 }
-
-                if (!string.IsNullOrEmpty(marca))
+                else if (marca != null)
                 {
-                    queryConsulta += " AND m.Descripcion = @Marca";
+
+                }
+                else
+                {
+                    categoria != null;
+                }
+                */
+                /*
+                switch 
+                    case 1:
+                    "SELECT a.Id FROM articulos a where marca = @marca";
                     query.configSqlParams("@Marca", marca);
-                }
+
+                case 2:
+                    "SELECT a.Id FROM articulos a where categoria = @categoria";
+                    query.configSqlParams("@Categoria", categoria);
+
+                case 3:
+                    "SELECT a.Id FROM articulos a where marca = @marca and categoria = @categoria";
+                    query.configSqlParams("@Marca", marca);
+                    query.configSqlParams("@Categoria", categoria);
+
+                break;
+                
                 query.configSqlQuery(queryConsulta);
 
                 query.configSqlConexion(conexion.obtenerConexion());
@@ -474,7 +489,7 @@ namespace ApplicationService
             }
 
             return lista;
-        }
-
+        }*/
+        
     }
 }

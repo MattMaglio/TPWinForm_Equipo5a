@@ -60,11 +60,12 @@
             // 
             // pboxImagenUrl
             // 
+            this.pboxImagenUrl.BackColor = System.Drawing.Color.Honeydew;
             this.pboxImagenUrl.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pboxImagenUrl.Location = new System.Drawing.Point(540, 85);
             this.pboxImagenUrl.Name = "pboxImagenUrl";
             this.pboxImagenUrl.Size = new System.Drawing.Size(343, 250);
-            this.pboxImagenUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pboxImagenUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxImagenUrl.TabIndex = 1;
             this.pboxImagenUrl.TabStop = false;
             // 

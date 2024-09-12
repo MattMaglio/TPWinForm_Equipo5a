@@ -71,7 +71,7 @@ namespace ApplicationService
             try
             {
 
-                query.configSqlQuery("SELECT i.Id, I.IdArticulo, i.ImagenUrl FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo WHERE Codigo = @codArt");
+                query.configSqlQuery("SELECT i.Id, a.Id AS IdArticulo, i.ImagenUrl FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo WHERE Codigo = @codArt AND i.Id IS NOT NULL");
                 query.configSqlParams("@codArt", codFiltrado);
                 query.configSqlConexion(conexion.obtenerConexion());
 
@@ -86,6 +86,7 @@ namespace ApplicationService
                     auxImg.IdArticulo = (int)result["IdArticulo"];
                     auxImg.Id = (int)result["Id"];
                     auxImg.ImagenUrl = (string)result["ImagenUrl"];
+
                         
                     lista.Add(auxImg);
                     

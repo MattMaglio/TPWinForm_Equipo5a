@@ -212,12 +212,12 @@ namespace WinFormAPP
             string seleccionCat = cboCategoria.SelectedItem.ToString();
             string seleccionMarca = cboMarca.SelectedItem.ToString();
             // paso a una lista , los articulos donde filtra la lista y le paso como parametro lo capturado en los cbo
-            List<Articulo> listaArt = articuloAS.buscarArt(seleccionCat, seleccionMarca);
-
+            //List<Articulo> listaArt = articuloAS.buscarArt(seleccionCat, seleccionMarca);
+            /*
             dgvArt.DataSource = null;
             dgvArt.DataSource = listaArt;
             ocultarColumnas();
-
+            */
         }
     }
 }

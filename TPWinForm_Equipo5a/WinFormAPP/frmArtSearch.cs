@@ -49,7 +49,15 @@ namespace WinFormAPP
             dgvUrlImg.DataSource = listUrl;
             dgvUrlImg.Columns["Id"].Visible = false;
             dgvUrlImg.Columns["IdArticulo"].Visible = false;
-            cargarImagen(listUrl[0].ImagenUrl);
+            if (listUrl.Any())
+            {
+                cargarImagen(listUrl[0].ImagenUrl);
+            }
+            else
+            {
+                cargarImagen("sin imagen");
+                tbImgArt.Text = string.Empty;
+            }
         }
 
         public void cargarFormularioDisable()
@@ -249,7 +257,7 @@ namespace WinFormAPP
 
         private void btnCanelar_Click(object sender, EventArgs e)
         {
-            Close();
+            cargarFormularioDisable();
         }
     }
 }
