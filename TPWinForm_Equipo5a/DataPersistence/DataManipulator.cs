@@ -61,6 +61,20 @@ namespace DataPersistence
          
             sqlQuery.Parameters.AddWithValue(nombre, valor);
         }
+        //*********************************************************************************************
+        //EJECUTAR ESCALAR (SE USA PARA QUERIES QUE DEVUELVEN UN VALOR UNICO)
+        public object ejecutarEscalar()
+        {
+            if (sqlQuery.Connection == null)
+            {
+                throw new InvalidOperationException("La conexión no ha sido configurada.");
+            }
+
+            object result = sqlQuery.ExecuteScalar();
+            return result;
+        }
+
+
 
     }
 }

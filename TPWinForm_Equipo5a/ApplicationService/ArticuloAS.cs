@@ -288,23 +288,21 @@ namespace ApplicationService
                 datos.cerrarConexion();
             }
         }
-
-        public void agregarArt(Articulo art)
+        //****************************************************************************************************************************
+        public int agregarArt(Articulo art)
         {
             DataAccess conexion = new DataAccess();  // Gestiono la conexión a la base de datos
-            DataManipulator query = new DataManipulator();  // GEstiono la ejecución de consultas
+            DataManipulator query = new DataManipulator();  // Gestiono la ejecución de consultas
 
             try
             {
-                // Configuro query de inserción
-                query.configSqlQuery("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES(@codArt, @nombreArt, @descArt, @idMarca, @idCategoria, @precioArt)");
-                            
+                // Configuro query de inserción y recuperación del ID insertado
+                query.configSqlQuery("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES(@codArt, @nombreArt, @descArt, @idMarca, @idCategoria, @precioArt); SELECT SCOPE_IDENTITY();");
 
-
-                // Configuro conexion a DB
+                // Configuro conexión a DB
                 query.configSqlConexion(conexion.obtenerConexion());
 
-                // Abro conexion
+                // Abro la conexión
                 conexion.abrirConexion();
 
                 // Parámetros de la query
@@ -315,21 +313,25 @@ namespace ApplicationService
                 query.configSqlParams("@idCategoria", art.Categoria.Id);
                 query.configSqlParams("@precioArt", art.Precio);
 
+                // Ejecutar la query y obtener el ID generado
+                int idGenerado = Convert.ToInt32(query.ejecutarEscalar());
 
-                
-                query.ejecutarAccion();
+                return idGenerado;
             }
             catch (Exception ex)
             {
-                
                 throw new Exception("Error al insertar el artículo en la base de datos", ex);
             }
             finally
             {
-                // Cierro conexion
+                // Cierro la conexión
                 conexion.cerrarConexion();
             }
         }
+
+
+
+        //*************************************************************************************************************************
 
         /*public List<Articulo> listaFiltrada (string categoria, string marca)
         {
@@ -351,45 +353,45 @@ namespace ApplicationService
                 {
                     queryConsulta += " AND m.Descripcion = @Descripcion";
                 }*/
-               /* if(!string.IsNullOrEmpty(categoria))
+        /* if(!string.IsNullOrEmpty(categoria))
 {
-                    queryConsulta += " AND a.IdCategoria = @IdCategoria"; // Filtrar por Id de la categoría
-                    //query.configSqlParametro("@IdCategoria", categoria);  // Asigna el valor del parámetro
-                }
-                if (!string.IsNullOrEmpty(marca))
-                {
-                    queryConsulta += " AND a.IdMarca = @IdMarca"; // Filtrar por Id de la marca
-                    //query.configSqlParametro("@IdMarca", marca);  // Asigna el valor del parámetro
-                }
-                query.configSqlQuery(queryConsulta);
-                query.configSqlConexion(conexion.obtenerConexion());
+             queryConsulta += " AND a.IdCategoria = @IdCategoria"; // Filtrar por Id de la categoría
+             //query.configSqlParametro("@IdCategoria", categoria);  // Asigna el valor del parámetro
+         }
+         if (!string.IsNullOrEmpty(marca))
+         {
+             queryConsulta += " AND a.IdMarca = @IdMarca"; // Filtrar por Id de la marca
+             //query.configSqlParametro("@IdMarca", marca);  // Asigna el valor del parámetro
+         }
+         query.configSqlQuery(queryConsulta);
+         query.configSqlConexion(conexion.obtenerConexion());
 
 
-                conexion.abrirConexion();
-                result = query.ejecutarConsulta();
-                while (result.Read())
-                {
-                    Articulo aux = new Articulo();
+         conexion.abrirConexion();
+         result = query.ejecutarConsulta();
+         while (result.Read())
+         {
+             Articulo aux = new Articulo();
 
-                    aux.Id = (int)result["Id"];
-                    aux.Nombre = (string)result["Nombre"];
-                    aux.Marca.Descripcion = (string)result["Descripcion"];
-                    aux.Categoria.Descripcion = (string)result["Descripcion"];
+             aux.Id = (int)result["Id"];
+             aux.Nombre = (string)result["Nombre"];
+             aux.Marca.Descripcion = (string)result["Descripcion"];
+             aux.Categoria.Descripcion = (string)result["Descripcion"];
 
-                    listaArtFiltrados.Add(aux);
-                }
-                return listaArtFiltrados;
-            }
-            catch (Exception ex)
-            {
+             listaArtFiltrados.Add(aux);
+         }
+         return listaArtFiltrados;
+     }
+     catch (Exception ex)
+     {
 
-                throw ex;
-            }
-            finally
-            {
-                conexion.cerrarConexion();
-            }
-        }*/
+         throw ex;
+     }
+     finally
+     {
+         conexion.cerrarConexion();
+     }
+ }*/
         public List<Articulo> buscarArt(string categoria, string marca)
         {
 

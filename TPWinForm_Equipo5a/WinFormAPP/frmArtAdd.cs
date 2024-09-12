@@ -43,7 +43,7 @@ namespace WinFormAPP
                 btnCancelAdd.Left = (this.ClientSize.Width - btnCancelAdd.Width) / 2;
                 btnCancelAdd.Top = (this.ClientSize.Height - btnCancelAdd.Height) / 2+120;
 
-                lbExitoArtAdd.Visible = false;
+                //lbExitoArtAdd.Visible = false;
                 
             }
             else
@@ -86,19 +86,18 @@ namespace WinFormAPP
 
                 MessageBox.Show(ex.ToString());
             }
-        } 
-
+        }
+        //********************************************************************************************
         private void btnAddArt_Click(object sender, EventArgs e)
         {
-            //Cargo el obj
-            Articulo art = new Articulo(); 
+            // Cargo el objeto Artículo
+            Articulo art = new Articulo();
             ArticuloAS artAS = new ArticuloAS();
             ImagenAS imgAS = new ImagenAS();
 
-
-
             try
             {
+                // Asigno los valores a las propiedades del artículo
                 art.Codigo = tbCodArt.Text;
                 art.Nombre = tbNomArt.Text;
                 art.Descripcion = tbDescArt.Text;
@@ -106,36 +105,64 @@ namespace WinFormAPP
                 art.Marca = (Marca)cboMarcaArt.SelectedItem;
                 art.Precio = decimal.Parse(tbPreArt.Text);
 
+                // Agrego el artículo y obtengo su ID
+                int idArticuloGenerado = artAS.agregarArt(art);
+                art.Id = idArticuloGenerado;  // Asigno el ID generado al artículo
 
-               
-            //Agrego el obj
-                artAS.agregarArt(art);
-                MessageBox.Show("Artículo agregado exitosamente");
+                
 
-            // OBTENER EL ID DEL OBJ ART PARA PASARLO AL OBJ IMAGEN. 
-
-            // Verifico si se ingresó URL de Img
+                // Verifico si se ingresó URL de imagen
                 if (!string.IsNullOrWhiteSpace(tbImgArt.Text))
                 {
                     Imagen img = new Imagen();
-
                     img.IdArticulo = art.Id;
                     img.ImagenUrl = tbImgArt.Text.ToString();
-                    
-                    
+
                     // Agrego la imagen
                     imgAS.agregarImagen(img);
-                    
                 }
 
+                //segunda imagen*********************************************************************
+                // Preguntar si se desea agregar una segunda imagen
+               /* DialogResult result = MessageBox.Show("¿Desea agregar una segunda imagen?", "Agregar Imagen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Abrir el formulario para ingresar la segunda URL
+                    FormAgregarImagen formImagen = new FormAgregarImagen();
+                    if (formImagen.ShowDialog() == DialogResult.OK)
+                    {
+                        // Si se ingresó una URL válida en el formulario
+                        if (!string.IsNullOrWhiteSpace(formImagen.UrlImagen))
+                        {
+                            Imagen imgSegunda = new Imagen();
+                            imgSegunda.IdArticulo = art.Id;
+                            imgSegunda.ImagenUrl = formImagen.UrlImagen;
+
+                            // Agregar la segunda imagen
+                            imgAS.agregarImagen(imgSegunda);
+                        }
+                    }
+                }*/
+
+
+
+                ///***********************************************************************************
+
+
+
+                MessageBox.Show("Artículo agregado exitosamente");
+
+                Close();
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
+
+               
         private void cargarImagen(string imagen)
         {
             try

@@ -44,7 +44,6 @@
             this.cboMarcaArt = new System.Windows.Forms.ComboBox();
             this.btnAddArt = new System.Windows.Forms.Button();
             this.lbTituloArtAltas = new System.Windows.Forms.Label();
-            this.lbExitoArtAdd = new System.Windows.Forms.Label();
             this.btnCancelAdd = new System.Windows.Forms.Button();
             this.pbArt = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
@@ -181,7 +180,7 @@
             // 
             // btnAddArt
             // 
-            this.btnAddArt.Location = new System.Drawing.Point(280, 440);
+            this.btnAddArt.Location = new System.Drawing.Point(273, 405);
             this.btnAddArt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddArt.Name = "btnAddArt";
             this.btnAddArt.Size = new System.Drawing.Size(169, 66);
@@ -201,20 +200,9 @@
             this.lbTituloArtAltas.TabIndex = 3;
             this.lbTituloArtAltas.Text = "Alta de artículos";
             // 
-            // lbExitoArtAdd
-            // 
-            this.lbExitoArtAdd.AutoSize = true;
-            this.lbExitoArtAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbExitoArtAdd.Location = new System.Drawing.Point(380, 596);
-            this.lbExitoArtAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbExitoArtAdd.Name = "lbExitoArtAdd";
-            this.lbExitoArtAdd.Size = new System.Drawing.Size(324, 18);
-            this.lbExitoArtAdd.TabIndex = 17;
-            this.lbExitoArtAdd.Text = "place holder: ¡Articulo agregado con exito!";
-            // 
             // btnCancelAdd
             // 
-            this.btnCancelAdd.Location = new System.Drawing.Point(671, 440);
+            this.btnCancelAdd.Location = new System.Drawing.Point(659, 405);
             this.btnCancelAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelAdd.Name = "btnCancelAdd";
             this.btnCancelAdd.Size = new System.Drawing.Size(169, 66);
@@ -239,7 +227,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.pbArt);
             this.Controls.Add(this.btnCancelAdd);
-            this.Controls.Add(this.lbExitoArtAdd);
             this.Controls.Add(this.lbTituloArtAltas);
             this.Controls.Add(this.btnAddArt);
             this.Controls.Add(this.cboMarcaArt);
@@ -286,7 +273,6 @@
         private System.Windows.Forms.ComboBox cboMarcaArt;
         private System.Windows.Forms.Button btnAddArt;
         private System.Windows.Forms.Label lbTituloArtAltas;
-        private System.Windows.Forms.Label lbExitoArtAdd;
         private System.Windows.Forms.Button btnCancelAdd;
         private System.Windows.Forms.PictureBox pbArt;
     }
