@@ -20,7 +20,7 @@ namespace WinFormAPP
 {
     public partial class frmArtSearch : Form
     {
-        private Articulo articulo = null; // Lo utilizo para el constructor
+      
         private List<Imagen> listUrl;
         private Articulo art = null;
         private Imagen img = null;
@@ -28,12 +28,6 @@ namespace WinFormAPP
         {
             InitializeComponent();
         }
-        public frmArtSearch(Articulo articulo)// Duplico el constructor para utilizar la ventana en boton mod
-        {
-            InitializeComponent();
-            this.articulo = articulo;
-        }
-
 
         public void cargarArticuloBuscado()
         {
@@ -49,7 +43,15 @@ namespace WinFormAPP
             dgvUrlImg.DataSource = listUrl;
             dgvUrlImg.Columns["Id"].Visible = false;
             dgvUrlImg.Columns["IdArticulo"].Visible = false;
-            cargarImagen(listUrl[0].ImagenUrl);
+            if (listUrl.Any())
+            {
+                cargarImagen(listUrl[0].ImagenUrl);
+            }
+            else
+            {
+                cargarImagen("sin imagen");
+                tbImgArt.Text = string.Empty;
+            }
         }
 
         public void cargarFormularioDisable()
@@ -249,7 +251,7 @@ namespace WinFormAPP
 
         private void btnCanelar_Click(object sender, EventArgs e)
         {
-            Close();
+            cargarFormularioDisable();
         }
     }
 }

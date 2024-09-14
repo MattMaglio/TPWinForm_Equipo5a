@@ -8,7 +8,7 @@ namespace DataPersistence
 
         public DataAccess()
         {
-            string connectionString = "Server=.\\SQLEXPRESS;Database=CATALOGO_P3_DB;Trusted_Connection=True;";
+            string connectionString = "Server=.\\SQLEXPRESS01;Database=CATALOGO_P3_DB;Trusted_Connection=True;";
             conexionDB = new SqlConnection(connectionString);
         }
 
