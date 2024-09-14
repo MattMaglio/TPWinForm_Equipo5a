@@ -189,6 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(890, 395);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFiltrar);
@@ -203,8 +204,9 @@
             this.Controls.Add(this.btnVerDetalleArt);
             this.Controls.Add(this.pboxImagenUrl);
             this.Controls.Add(this.dgvArt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmListArt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "frm Lista Articulos";
             this.Load += new System.EventHandler(this.frmListArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).EndInit();

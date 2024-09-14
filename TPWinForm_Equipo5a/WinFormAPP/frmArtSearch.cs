@@ -20,7 +20,7 @@ namespace WinFormAPP
 {
     public partial class frmArtSearch : Form
     {
-        private Articulo articulo = null; // Lo utilizo para el constructor
+      
         private List<Imagen> listUrl;
         private Articulo art = null;
         private Imagen img = null;
@@ -28,12 +28,6 @@ namespace WinFormAPP
         {
             InitializeComponent();
         }
-        public frmArtSearch(Articulo articulo)// Duplico el constructor para utilizar la ventana en boton mod
-        {
-            InitializeComponent();
-            this.articulo = articulo;
-        }
-
 
         public void cargarArticuloBuscado()
         {

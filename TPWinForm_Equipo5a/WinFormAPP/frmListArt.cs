@@ -38,9 +38,6 @@ namespace WinFormAPP
             cboMarca.Items.Add("Sony");
             cboMarca.Items.Add("Huawei");
             cboMarca.Items.Add("Motorola");
-
-
-
         }
 
         private void dgvArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,8 +86,8 @@ namespace WinFormAPP
         private void ocultarColumnas()
         {
             dgvArt.Columns["Id"].Visible = false;
-            dgvArt.Columns["Marca"].Visible = false;
-            dgvArt.Columns["Categoria"].Visible = false;
+            dgvArt.Columns["Marca"].Visible = true;
+            dgvArt.Columns["Categoria"].Visible = true;
             dgvArt.Columns["Imagen"].Visible = false;
 
         }
@@ -176,9 +173,17 @@ namespace WinFormAPP
         {
             Articulo articulo;
             articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
-            frmArtSearch modifcar = new frmArtSearch(articulo);
-            modifcar.ShowDialog();
-            cargar();
+            int modificar = 1;
+
+            frmArtAdd articuloModificar = new frmArtAdd(articulo, modificar);
+
+            if (articuloModificar.ShowDialog() == DialogResult.OK)
+            {
+               
+                cargar();
+                Close();
+            }
+            
         }
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -190,7 +195,7 @@ namespace WinFormAPP
                 listaArticulosFiltrada = listArt.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) ||
                                                          x.Codigo.ToUpper().Contains(filtro.ToUpper())||
                                                          x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
-                // listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+                 
             }
             else
             {
@@ -205,19 +210,18 @@ namespace WinFormAPP
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             ArticuloAS articuloAS = new ArticuloAS();
-            //Obtengo la seleccion de los cbo
-            //string seleccionCat = cboCategoria.SelectedItem != null ? cboCategoria.SelectedItem.ToString() : null;
-            //string seleccionMarca = cboMarca.SelectedItem != null ? cboMarca.SelectedItem.ToString() : null;
 
-            string seleccionCat = cboCategoria.SelectedItem.ToString();
-            string seleccionMarca = cboMarca.SelectedItem.ToString();
-            // paso a una lista , los articulos donde filtra la lista y le paso como parametro lo capturado en los cbo
-            //List<Articulo> listaArt = articuloAS.buscarArt(seleccionCat, seleccionMarca);
-            /*
+            //string seleccionCat = cboCategoria.SelectedItem.ToString();
+            //string seleccionMarca = cboMarca.SelectedItem.ToString();
+            string seleccionCat = cboCategoria.SelectedItem != null ? cboCategoria.SelectedItem.ToString() : "Todas";
+            string seleccionMarca = cboMarca.SelectedItem != null ? cboMarca.SelectedItem.ToString() : "Todas";
+
+            List<Articulo> listaArt = articuloAS.ListaFiltrada(seleccionCat, seleccionMarca);
+            
             dgvArt.DataSource = null;
             dgvArt.DataSource = listaArt;
+
             ocultarColumnas();
-            */
         }
     }
 }

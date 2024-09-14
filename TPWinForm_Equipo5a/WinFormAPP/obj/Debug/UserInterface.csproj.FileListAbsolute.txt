@@ -66,3 +66,4 @@ C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\danie\OneDrive\Escritorio\ITATI\PROGRAMACION 3\ACTIVIDADES\Actividad 2 TP WINFORMS\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.FormAgregarImagen.resources
 D:\GitHub\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.FormAgregarImagen.resources
+C:\Users\Lenovo\Desktop\ProyectoLabII\TPWinForm_Equipo5a\TPWinForm_Equipo5a\WinFormAPP\obj\Debug\WinFormAPP.FormAgregarImagen.resources

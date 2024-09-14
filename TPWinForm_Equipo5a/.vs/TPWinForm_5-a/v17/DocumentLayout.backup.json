@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{B083F742-71B9-492F-B094-B70956E56990}|ApplicationService\\ApplicationService.csproj|solutionrelative:applicationservice\\articuloas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\datapersistence\\datamanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|c:\\users\\lenovo\\desktop\\proyectolabii\\tpwinform_equipo5a\\tpwinform_equipo5a\\datapersistence\\datamanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|solutionrelative:datapersistence\\datamanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\datapersistence\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|c:\\users\\lenovo\\desktop\\proyectolabii\\tpwinform_equipo5a\\tpwinform_equipo5a\\datapersistence\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77867393-81C6-4873-9E5B-CF7F315EB53A}|DataPersistence\\DataPersistence.csproj|solutionrelative:datapersistence\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,7 +42,8 @@
               "RelativeToolTip": "DataPersistence\\DataManipulator.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T13:07:39.591Z"
+              "WhenOpened": "2024-09-13T13:07:39.591Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -54,7 +55,8 @@
               "RelativeToolTip": "DataPersistence\\DataAccess.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T13:07:30.213Z"
+              "WhenOpened": "2024-09-13T13:07:30.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,7 +66,7 @@
               "RelativeDocumentMoniker": "ApplicationService\\ArticuloAS.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\ApplicationService\\ArticuloAS.cs",
               "RelativeToolTip": "ApplicationService\\ArticuloAS.cs",
-              "ViewState": "AgIAAFABAAAAAAAAAAAUwOcBAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADcCAAAAAAAAAAAAAEYCAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T18:51:04.512Z",
               "EditorCaption": ""
@@ -79,7 +81,8 @@
               "RelativeToolTip": "WinFormAPP\\frmListArt.cs",
               "ViewState": "AgIAAKsAAAAAAAAAAAAUwNsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T18:48:39.674Z"
+              "WhenOpened": "2024-09-12T18:48:39.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -90,7 +93,8 @@
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\ProyectoLabII\\TPWinForm_Equipo5a\\TPWinForm_Equipo5a\\WinFormAPP\\frmListArt.cs [Design]",
               "RelativeToolTip": "WinFormAPP\\frmListArt.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T18:46:30.707Z"
+              "WhenOpened": "2024-09-12T18:46:30.707Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
