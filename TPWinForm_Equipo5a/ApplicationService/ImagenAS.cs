@@ -1,6 +1,7 @@
 ﻿using DataPersistence;
 using Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -35,7 +36,40 @@ namespace ApplicationService
                 conexion.cerrarConexion();
             }
         }
+        public void agegarImagenesArtNuevo(List<Imagen> listImg, Articulo art)
+        {
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
 
+            try
+            {
+                foreach (var img in listImg)
+                {
+                    try
+                    {
+                        query.configSqlQuery("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES(@IdArt, @UrlImg)");
+                        query.configSqlConexion(conexion.obtenerConexion());
+                        query.configSqlParams("@IdArt", art.Id);
+                        query.configSqlParams("@UrlImg", img.ImagenUrl);
+
+                        conexion.abrirConexion();
+                        query.ejecutarAccion();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+            }
+            catch (Exception ex) 
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
         public void agregarImagen(Imagen img)
         {
             DataAccess conexion = new DataAccess();

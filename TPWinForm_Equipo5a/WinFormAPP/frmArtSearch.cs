@@ -29,31 +29,77 @@ namespace WinFormAPP
             InitializeComponent();
         }
 
-        public void cargarArticuloBuscado()
+        public frmArtSearch(int estado, Articulo artListado)
+        {
+            InitializeComponent();
+
+            
+            if (estado == 1) // Mod
+            {
+                
+                lbTituloArt.Text = "Modificación de artículos";
+
+                cargarFormularioEnable();
+                cargarArticuloBuscado(artListado);
+                btnDeletArt.Enabled = false;
+
+            }
+            else if (estado == 2) // Ver detalle
+            {
+                cargarFormularioDisable();
+                cargarArticuloBuscado(artListado);
+            }
+
+        }
+        public void cargarArticuloBuscado(Articulo artListado = null)
         {
             ImagenAS img = new ImagenAS();
 
-            tbNomArt.Text = art.Nombre.ToString();
-            tbDescArt.Text = art.Descripcion.ToString();
-            cboCatArt.SelectedValue = art.Categoria.Id;
-            cboMarcaArt.SelectedValue = art.Marca.Id;
-            tbPreArt.Text = art.Precio.ToString();
-
-            listUrl = img.listarFiltrado(tbCodArt.Text);
-            dgvUrlImg.DataSource = listUrl;
-            dgvUrlImg.Columns["Id"].Visible = false;
-            dgvUrlImg.Columns["IdArticulo"].Visible = false;
-            if (listUrl.Any())
+            if (artListado is null)
             {
-                cargarImagen(listUrl[0].ImagenUrl);
+                tbNomArt.Text = art.Nombre.ToString();
+                tbDescArt.Text = art.Descripcion.ToString();
+                cboCatArt.SelectedValue = art.Categoria.Id;
+                cboMarcaArt.SelectedValue = art.Marca.Id;
+                tbPreArt.Text = art.Precio.ToString();
+
+                listUrl = img.listarFiltrado(tbCodArt.Text);
+                dgvUrlImg.DataSource = listUrl;
+                dgvUrlImg.Columns["Id"].Visible = false;
+                dgvUrlImg.Columns["IdArticulo"].Visible = false;
+                if (listUrl.Any())
+                {
+                    cargarImagen(listUrl[0].ImagenUrl);
+                }
+                else
+                {
+                    cargarImagen("sin imagen");
+                    tbImgArt.Text = string.Empty;
+                }
             }
             else
             {
-                cargarImagen("sin imagen");
-                tbImgArt.Text = string.Empty;
+                tbNomArt.Text = artListado.Nombre.ToString();
+                tbDescArt.Text = artListado.Descripcion.ToString();
+                cboCatArt.SelectedValue = artListado.Categoria.Id;
+                cboMarcaArt.SelectedValue = artListado.Marca.Id;
+                tbPreArt.Text = artListado.Precio.ToString();
+
+                listUrl = img.listarFiltrado(tbCodArt.Text);
+                dgvUrlImg.DataSource = listUrl;
+                dgvUrlImg.Columns["Id"].Visible = false;
+                dgvUrlImg.Columns["IdArticulo"].Visible = false;
+                if (listUrl.Any())
+                {
+                    cargarImagen(listUrl[0].ImagenUrl);
+                }
+                else
+                {
+                    cargarImagen("sin imagen");
+                    tbImgArt.Text = string.Empty;
+                }
             }
         }
-
         public void cargarFormularioDisable()
         {
             CategoriaAS cat = new CategoriaAS();
@@ -66,6 +112,9 @@ namespace WinFormAPP
             cboMarcaArt.DataSource = marca.listar();
             cboMarcaArt.ValueMember = "Id";
             cboMarcaArt.DisplayMember = "Descripcion";
+
+            cboMarcaArt.SelectedValue = -1;
+            cboCatArt.SelectedValue = -1;
 
             tbNomArt.ReadOnly = true;
             tbDescArt.ReadOnly = true;
@@ -81,7 +130,6 @@ namespace WinFormAPP
             btnCancelar.Visible = false;
             btnCancelar.Enabled = false;
         }
-
         public void cargarFormularioEnable()
         {
             CategoriaAS cat = new CategoriaAS();
@@ -110,7 +158,6 @@ namespace WinFormAPP
             btnCancelar.Visible = true;
             btnCancelar.Enabled = true;
         }
-
         private void cargarImagen(string img)
         {
             try
@@ -142,7 +189,6 @@ namespace WinFormAPP
                 MessageBox.Show("Articulo invalido");
             }
         }
-
         private void dgvUrlImg_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvUrlImg.CurrentRow != null)
@@ -154,7 +200,6 @@ namespace WinFormAPP
                 tbImgArt.Text = img.ImagenUrl;
             }
         }
-
         private void btnModArt_Click(object sender, EventArgs e)
         {
             ArticuloAS artAS = new ArticuloAS();
@@ -170,7 +215,6 @@ namespace WinFormAPP
             cargarArticuloBuscado();
             btnDeletArt.Enabled = false;            
         }
-
         private void btnDeletArt_Click(object sender, EventArgs e)
         {
             try
@@ -189,12 +233,10 @@ namespace WinFormAPP
             
 
         }
-
         private void frmArtSearch_Load(object sender, EventArgs e)
         {
             cargarFormularioDisable();
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ArticuloAS artAS = new ArticuloAS();
@@ -211,7 +253,6 @@ namespace WinFormAPP
             btnModArt.Enabled = true;
 
         }
-
         private void btnAddUrl_Click(object sender, EventArgs e)
         {
             try
@@ -248,7 +289,6 @@ namespace WinFormAPP
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void btnCanelar_Click(object sender, EventArgs e)
         {
             cargarFormularioDisable();

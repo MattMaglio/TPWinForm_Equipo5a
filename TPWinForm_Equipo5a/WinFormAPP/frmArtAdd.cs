@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +17,11 @@ namespace WinFormAPP
 {
     public partial class frmArtAdd : Form
     {
-        private Articulo articulo = null; // variable que utilizo para el pasaje entre ventanas
+        private Articulo articulo = new Articulo(); // variable que utilizo para el pasaje entre ventanas
         private bool modoVerDetalle = false;
-        private int modoModificar = 1; // var para modo modificar
+        private int modoModificar = 0; // var para modo modificar
+        List<Imagen> listImg =new List<Imagen>(); // Contenedor de la imagen al agregarla al articulo.
+        private Imagen img = null; // Propiedad para manejar el control de la grid de imagenes.
         public frmArtAdd()
         {
             InitializeComponent();
@@ -62,8 +65,7 @@ namespace WinFormAPP
         }
         private void CargarDatos()
         {
-            
-            if (modoModificar == 1)
+            if (modoModificar == 0)
             {
                 // Configuracion del  formulario para modificar
                 lbTituloArtAltas.Text = "Modificar artículo";
@@ -76,8 +78,17 @@ namespace WinFormAPP
                 tbImgArt.Text = articulo.Imagen.ImagenUrl;
                 cboMarcaArt.Text = articulo.Marca.Descripcion;
                 cboCatArt.Text = articulo.Categoria.Descripcion;
+                cargarDGV();
                 // Configurar otros controles según sea necesario
             }
+        }
+        private void cargarDGV()
+        {   
+            tbImgArt.Clear();
+            dgvUrlImg.DataSource = null;
+            dgvUrlImg.DataSource = listImg;
+            dgvUrlImg.Columns["Id"].Visible = false;
+            dgvUrlImg.Columns["IdArticulo"].Visible = false;
         }
         private void frmArtAdd_Load(object sender, EventArgs e)
         {
@@ -90,20 +101,20 @@ namespace WinFormAPP
 
                 cboMarcaArt.DataSource = marca.listar();
                 cboCatArt.DataSource = categoria.listar();
-                if(articulo != null)// Desde el if para manipular la ventana agregar desde el boton ver detalle articulo
-                {
-                    tbCodArt.Text = articulo.Codigo;
-                    tbNomArt.Text = articulo.Nombre;
-                    tbDescArt.Text = articulo.Descripcion;
-                    tbPreArt.Text = articulo.Precio.ToString();
+                
+                tbCodArt.Text = articulo.Codigo;
+                tbNomArt.Text = articulo.Nombre;
+                tbDescArt.Text = articulo.Descripcion;
+                tbPreArt.Text = articulo.Precio.ToString();
 
-                    cboCatArt.ValueMember = "Id";
-                    cboCatArt.DisplayMember = "Descripcion";
-                    cboMarcaArt.ValueMember = "Id";
-                    cboMarcaArt.DisplayMember = "Descripcion";
-                    cargarImagen(articulo.Imagen.ImagenUrl);
+                cboCatArt.ValueMember = "Id";
+                cboCatArt.DisplayMember = "Descripcion";
+                cboCatArt.SelectedValue = -1;
 
-                }
+                cboMarcaArt.ValueMember = "Id";
+                cboMarcaArt.DisplayMember = "Descripcion";
+                cboMarcaArt.SelectedValue = -1;
+
 
             }
             catch (Exception ex)
@@ -112,7 +123,6 @@ namespace WinFormAPP
                 MessageBox.Show(ex.ToString());
             }
         }
-        //********************************************************************************************
         private void btnAddArt_Click(object sender, EventArgs e)
         {
             // Cargo el objeto Artículo
@@ -159,43 +169,8 @@ namespace WinFormAPP
                     int idArticuloGenerado = artAS.agregarArt(art);
                     art.Id = idArticuloGenerado;  // Asigno el ID generado al artículo
 
-                
+                    imgAS.agegarImagenesArtNuevo(listImg, art);
 
-                    // Verifico si se ingresó URL de imagen
-                    if (!string.IsNullOrWhiteSpace(tbImgArt.Text))
-                    {
-                        Imagen img = new Imagen();
-                        img.IdArticulo = art.Id;
-                        img.ImagenUrl = tbImgArt.Text.ToString();
-
-                        // Agrego la imagen
-                        imgAS.agregarImagen(img);
-                    }
-
-                    //segunda imagen*********************************************************************
-                    // Preguntar si se desea agregar una segunda imagen
-                   /* DialogResult result = MessageBox.Show("¿Desea agregar una segunda imagen?", "Agregar Imagen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        // Abrir el formulario para ingresar la segunda URL
-                        FormAgregarImagen formImagen = new FormAgregarImagen();
-                        if (formImagen.ShowDialog() == DialogResult.OK)
-                        {
-                            // Si se ingresó una URL válida en el formulario
-                            if (!string.IsNullOrWhiteSpace(formImagen.UrlImagen))
-                            {
-                                Imagen imgSegunda = new Imagen();
-                                imgSegunda.IdArticulo = art.Id;
-                                imgSegunda.ImagenUrl = formImagen.UrlImagen;
-
-                                // Agregar la segunda imagen
-                                imgAS.agregarImagen(imgSegunda);
-                            }
-                        }
-                    }*/
-
-                    ///***********************************************************************************
                     MessageBox.Show("Artículo agregado exitosamente");
                 }
                 this.DialogResult = DialogResult.OK;
@@ -205,10 +180,7 @@ namespace WinFormAPP
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
-
-
-               
+        }   
         private void cargarImagen(string imagen)
         {
             try
@@ -225,10 +197,50 @@ namespace WinFormAPP
         {
             Close();
         }
-
         private void tbImgArt_Leave(object sender, EventArgs e)
         {
             cargarImagen(tbImgArt.Text);
+        }
+        private void btnAddUrl_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                img = new Imagen();
+                img.ImagenUrl = tbImgArt.Text;
+                listImg.Add(img);
+                cargarDGV();
+
+
+                MessageBox.Show("Url agregada");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void btnDelUrl_Click(object sender, EventArgs e)
+        {
+            try
+            {   
+                listImg.Remove(img);
+                cargarDGV();
+
+                MessageBox.Show("Url eliminada");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void dgvUrlImg_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvUrlImg.CurrentRow != null)
+            {
+                img = (Imagen)dgvUrlImg.CurrentRow.DataBoundItem;
+                cargarImagen(img.ImagenUrl);
+                tbImgArt.Clear();
+            }
         }
     }
 }

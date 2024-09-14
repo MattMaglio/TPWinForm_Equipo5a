@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ApplicationService;
 using DataPersistence;
 using System.Text.RegularExpressions;
+using System.Runtime.InteropServices;
 
 
 
@@ -19,51 +20,39 @@ namespace WinFormAPP
     public partial class frmListArt : Form
     {
         private List<Articulo> listArt;
+        private List<Imagen> imageList;
+        Imagen img = null;
         public frmListArt()
         {
             InitializeComponent();
         }
-
         private void frmListArt_Load(object sender, EventArgs e)
         {
+            CategoriaAS cat = new CategoriaAS();
+            MarcaAS marca = new MarcaAS();
+
+            cboCategoria.DataSource = cat.listar();
+            cboCategoria.ValueMember = "Id";
+            cboCategoria.DisplayMember = "Descripcion";
+            cboCategoria.SelectedValue = -1;
+
+            cboMarca.DataSource = marca.listar();
+            cboMarca.ValueMember = "Id";
+            cboMarca.DisplayMember = "Descripcion";
+            cboMarca.SelectedValue = -1;
 
             cargar();
-            cboCategoria.Items.Add("Televisores");
-            cboCategoria.Items.Add("Celulares");
-            cboCategoria.Items.Add("Media");
-            cboCategoria.Items.Add("Audio");
-
-            cboMarca.Items.Add("Samgung");
-            cboMarca.Items.Add("Apple");
-            cboMarca.Items.Add("Sony");
-            cboMarca.Items.Add("Huawei");
-            cboMarca.Items.Add("Motorola");
         }
-
         private void dgvArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void btnVerDetalleArt_Click(object sender, EventArgs e)
-        {
-            Articulo verArticulo = new Articulo();
-            verArticulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
-
-            frmArtAdd verDetalle = new frmArtAdd(verArticulo, true);
-            verDetalle.ShowDialog();
-            cargar();
-   
-
-        }
-
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             frmArtAdd ventana = new frmArtAdd();
             ventana.ShowDialog();
             cargar();
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             // funcion para borrar la busqueda, actualice la lista 
@@ -73,14 +62,16 @@ namespace WinFormAPP
             }
            
         }
-        private void cargar()
+        private void cargar(int marca = -1, int cate = -1)
         {   // cargamos la lista y mostramos imagen 
             ArticuloAS artAS = new ArticuloAS();
-            listArt = artAS.listarFrmListado();
+            listArt = artAS.listarVersatil(marca, cate);
             dgvArt.DataSource = listArt;
             ocultarColumnas();
-            pboxImagenUrl.Load(listArt[0].Imagen.ImagenUrl);
-
+            //if (listArt.Count > 0)
+            //{
+            //    pboxImagenUrl.Load(listArt[0].Imagen.ImagenUrl);
+            //}
 
         }
         private void ocultarColumnas()
@@ -91,55 +82,49 @@ namespace WinFormAPP
             dgvArt.Columns["Imagen"].Visible = false;
 
         }
-
-        public void cargarImagenUrl(string imagen)
+        private void cargarDGV()
+        {
+            dgvUrlImg.DataSource = null;
+            dgvUrlImg.DataSource = imageList;
+            dgvUrlImg.Columns["Id"].Visible = false;
+            dgvUrlImg.Columns["IdArticulo"].Visible = false;
+        }
+        private void cargarImagen(string img)
         {
             try
             {
-                pboxImagenUrl.Load(imagen);
-
+                pbArt.Load(img);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                Console.WriteLine($"Error al cargar la imagen desde la URL: {ex.Message}");
-                // Cargar imagen por defecto
-                pboxImagenUrl.Load("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
-
+                pbArt.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gpZSb_Y8zMJevdd9E2ZxI4doS3D4BMsus5ltKAyKydLH-zxnGIQQ3Dx7sNWcnZvFea4&usqp=CAU");
             }
-
+            
         }
-
-
         private void dgvArt_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvArt.CurrentRow != null)
             {
                 Articulo seleccion = (Articulo)dgvArt.CurrentRow.DataBoundItem;
+                ImagenAS imgAS = new ImagenAS();
 
-                if (seleccion != null && seleccion.Imagen != null)
-                {
-                    string imagenUrl = seleccion.Imagen.ImagenUrl;
+                imageList = imgAS.listarFiltrado(seleccion.Codigo);
+                cargarImagen("");
 
-                    if (!string.IsNullOrEmpty(imagenUrl))
-                    {
-                        cargarImagenUrl(imagenUrl);
-                    }
-                    else
-                    {
-                        // Si la URL es nula o vacía, carga una imagen por defecto
-                        cargarImagenUrl("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
-                    }
-                }
-                else
-                {
-                    // Si 'seleccion' o 'Imagen' es null, carga una imagen por defecto
-                    cargarImagenUrl("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
-                }
+            }
+            cargarDGV();
+        }
+        private void dgvUrlImg_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvUrlImg.CurrentRow != null)
+            {
+                //dgvUrlImg.CurrentRow.Cells[0].Selected = true;
+
+                img = (Imagen)dgvUrlImg.CurrentRow.DataBoundItem;
+                cargarImagen(img.ImagenUrl);
             }
 
         }
-
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
             if (dgvArt.CurrentRow != null)
@@ -168,24 +153,41 @@ namespace WinFormAPP
             }
 
         }
-
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
-            Articulo articulo;
+            Articulo articulo = new Articulo();
             articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
-            int modificar = 1;
+            int accion = 1;
 
-            frmArtAdd articuloModificar = new frmArtAdd(articulo, modificar);
+            frmArtSearch articuloModificar = new frmArtSearch(accion, articulo);
 
+            articuloModificar.Show();
+            /*
             if (articuloModificar.ShowDialog() == DialogResult.OK)
             {
                
                 cargar();
                 Close();
-            }
-            
-        }
+            }*/
 
+        }
+        private void btnVerDetalleArt_Click(object sender, EventArgs e)
+        {
+            Articulo articulo = new Articulo();
+            articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
+            int accion = 2;
+
+            frmArtSearch articuloDetalle = new frmArtSearch(accion, articulo);
+
+            if (articuloDetalle.ShowDialog() == DialogResult.OK)
+            {
+
+                cargar();
+                Close();
+            }
+
+
+        }
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
             List<Articulo> listaArticulosFiltrada = new List<Articulo>();
@@ -206,22 +208,32 @@ namespace WinFormAPP
             ocultarColumnas();
 
         }
-
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             ArticuloAS articuloAS = new ArticuloAS();
 
             //string seleccionCat = cboCategoria.SelectedItem.ToString();
             //string seleccionMarca = cboMarca.SelectedItem.ToString();
-            string seleccionCat = cboCategoria.SelectedItem != null ? cboCategoria.SelectedItem.ToString() : "Todas";
-            string seleccionMarca = cboMarca.SelectedItem != null ? cboMarca.SelectedItem.ToString() : "Todas";
-
-            List<Articulo> listaArt = articuloAS.ListaFiltrada(seleccionCat, seleccionMarca);
+            //string seleccionCat = cboCategoria.SelectedIndex != null ? cboCategoria.SelectedItem.ToString() : "";
+            //string seleccionMarca = cboMarca.SelectedItem != null ? cboMarca.SelectedItem.ToString() : "";
+            int sCate = Convert.ToInt32(cboCategoria.SelectedValue);
+            int sMarca = Convert.ToInt32(cboMarca.SelectedValue);
+            List<Articulo> listaArt = articuloAS.listarVersatil(sMarca, sCate);
             
             dgvArt.DataSource = null;
             dgvArt.DataSource = listaArt;
 
             ocultarColumnas();
         }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            cboMarca.SelectedValue = -1;
+            cboCategoria.SelectedValue = -1;
+        }
+
     }
 }
