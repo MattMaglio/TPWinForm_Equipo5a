@@ -173,18 +173,17 @@ namespace WinFormAPP
         {
             Articulo articulo = new Articulo();
             articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
-            int accion = 2;
+            //int accion = 2;
+            bool estado = true;
 
-            frmArtSearch articuloDetalle = new frmArtSearch(accion, articulo);
-
+            //frmArtSearch articuloDetalle = new frmArtSearch(accion, articulo);
+            frmArtAdd articuloDetalle= new frmArtAdd(articulo, estado);
             if (articuloDetalle.ShowDialog() == DialogResult.OK)
             {
 
                 cargar();
                 Close();
             }
-
-
         }
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -209,11 +208,6 @@ namespace WinFormAPP
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             ArticuloAS articuloAS = new ArticuloAS();
-
-            //string seleccionCat = cboCategoria.SelectedItem.ToString();
-            //string seleccionMarca = cboMarca.SelectedItem.ToString();
-            //string seleccionCat = cboCategoria.SelectedIndex != null ? cboCategoria.SelectedItem.ToString() : "";
-            //string seleccionMarca = cboMarca.SelectedItem != null ? cboMarca.SelectedItem.ToString() : "";
             int sCate = Convert.ToInt32(cboCategoria.SelectedValue);
             int sMarca = Convert.ToInt32(cboMarca.SelectedValue);
             List<Articulo> listaArt = articuloAS.listarVersatil(sMarca, sCate);
