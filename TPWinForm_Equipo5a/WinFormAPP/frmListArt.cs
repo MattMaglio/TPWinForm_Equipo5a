@@ -161,14 +161,12 @@ namespace WinFormAPP
 
             frmArtSearch articuloModificar = new frmArtSearch(accion, articulo);
 
-            articuloModificar.Show();
-            /*
+           
             if (articuloModificar.ShowDialog() == DialogResult.OK)
-            {
-               
+            {  
                 cargar();
                 Close();
-            }*/
+            }
 
         }
         private void btnVerDetalleArt_Click(object sender, EventArgs e)

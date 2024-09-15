@@ -34,7 +34,7 @@ namespace WinFormAPP
             InitializeComponent();
 
             
-            if (estado == 1) // Mod
+            if (estado == 1) // Modificar
             {
                 
                 lbTituloArt.Text = "Modificación de artículos";
@@ -292,6 +292,11 @@ namespace WinFormAPP
         private void btnCanelar_Click(object sender, EventArgs e)
         {
             cargarFormularioDisable();
+        }
+
+        private void btnCancelarBusquedaArt_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

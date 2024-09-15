@@ -56,7 +56,7 @@
             this.dgvArt.MultiSelect = false;
             this.dgvArt.Name = "dgvArt";
             this.dgvArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArt.Size = new System.Drawing.Size(520, 578);
+            this.dgvArt.Size = new System.Drawing.Size(507, 239);
             this.dgvArt.TabIndex = 0;
             this.dgvArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArt_CellContentClick);
             this.dgvArt.SelectionChanged += new System.EventHandler(this.dgvArt_SelectionChanged);
@@ -113,7 +113,7 @@
             // 
             this.lblCat.AutoSize = true;
             this.lblCat.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCat.Location = new System.Drawing.Point(349, 41);
+            this.lblCat.Location = new System.Drawing.Point(336, 42);
             this.lblCat.Name = "lblCat";
             this.lblCat.Size = new System.Drawing.Size(70, 16);
             this.lblCat.TabIndex = 7;
@@ -122,7 +122,7 @@
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(425, 41);
+            this.cboCategoria.Location = new System.Drawing.Point(416, 42);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 8;
@@ -131,7 +131,7 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(576, 41);
+            this.lblMarca.Location = new System.Drawing.Point(553, 45);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(50, 16);
             this.lblMarca.TabIndex = 9;
@@ -140,7 +140,7 @@
             // cboMarca
             // 
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(662, 41);
+            this.cboMarca.Location = new System.Drawing.Point(622, 42);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
             this.cboMarca.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             this.btnFiltrar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnFiltrar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Location = new System.Drawing.Point(811, 41);
+            this.btnFiltrar.Location = new System.Drawing.Point(762, 42);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(102, 23);
             this.btnFiltrar.TabIndex = 11;
@@ -181,7 +181,7 @@
             // 
             this.btnClean.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnClean.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClean.Location = new System.Drawing.Point(811, 81);
+            this.btnClean.Location = new System.Drawing.Point(762, 80);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(102, 23);
             this.btnClean.TabIndex = 13;
@@ -193,21 +193,21 @@
             // 
             this.dgvUrlImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUrlImg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvUrlImg.Location = new System.Drawing.Point(579, 599);
+            this.dgvUrlImg.Location = new System.Drawing.Point(546, 397);
             this.dgvUrlImg.MultiSelect = false;
             this.dgvUrlImg.Name = "dgvUrlImg";
             this.dgvUrlImg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUrlImg.Size = new System.Drawing.Size(400, 123);
+            this.dgvUrlImg.Size = new System.Drawing.Size(318, 127);
             this.dgvUrlImg.TabIndex = 14;
             this.dgvUrlImg.SelectionChanged += new System.EventHandler(this.dgvUrlImg_SelectionChanged);
             // 
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbArt.Location = new System.Drawing.Point(579, 144);
+            this.pbArt.Location = new System.Drawing.Point(546, 144);
             this.pbArt.Margin = new System.Windows.Forms.Padding(2);
             this.pbArt.Name = "pbArt";
-            this.pbArt.Size = new System.Drawing.Size(400, 371);
+            this.pbArt.Size = new System.Drawing.Size(318, 239);
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 19;
             this.pbArt.TabStop = false;
@@ -218,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1004, 761);
+            this.ClientSize = new System.Drawing.Size(894, 549);
             this.Controls.Add(this.pbArt);
             this.Controls.Add(this.dgvUrlImg);
             this.Controls.Add(this.btnClean);
