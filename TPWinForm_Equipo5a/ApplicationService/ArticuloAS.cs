@@ -140,38 +140,39 @@ namespace ApplicationService
             }
 
         }
-        public void actualizarArticulo(Articulo art)
-        {
-            DataAccess conexion = new DataAccess();
-            DataManipulator query = new DataManipulator();
+         public void actualizarArticulo(Articulo art)
+         {
+             DataAccess conexion = new DataAccess();
+             DataManipulator query = new DataManipulator();
 
-            List<Articulo> lista = new List<Articulo>();
-            Articulo auxArt = new Articulo();
+             List<Articulo> lista = new List<Articulo>();
+             Articulo auxArt = new Articulo();
 
-            try
-            {
+             try
+             {
 
-                query.configSqlQuery("UPDATE ARTICULOS SET Nombre = @nombre, Descripcion = @desc, IdCategoria = @idCat, IdMarca = @idMarca, Precio = @precio WHERE Codigo = @codArt");
-                query.configSqlConexion(conexion.obtenerConexion());
-                query.configSqlParams("@codArt", art.Codigo);
-                query.configSqlParams("@nombre", art.Nombre);
-                query.configSqlParams("@desc", art.Descripcion);
-                query.configSqlParams("@idCat", art.Categoria.Id);
-                query.configSqlParams("@idMarca", art.Marca.Id);
-                query.configSqlParams("@precio", Convert.ToDecimal(art.Precio));
+                 query.configSqlQuery("UPDATE ARTICULOS SET Nombre = @nombre, Descripcion = @desc, IdCategoria = @idCat, IdMarca = @idMarca, Precio = @precio WHERE Codigo = @codArt");
+                 query.configSqlConexion(conexion.obtenerConexion());
+                 query.configSqlParams("@codArt", art.Codigo);
+                 query.configSqlParams("@nombre", art.Nombre);
+                 query.configSqlParams("@desc", art.Descripcion);
+                 query.configSqlParams("@idCat", art.Categoria.Id);
+                 query.configSqlParams("@idMarca", art.Marca.Id);
+                 query.configSqlParams("@precio", Convert.ToDecimal(art.Precio));
 
-                conexion.abrirConexion();
-                query.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                conexion.cerrarConexion();
-            }
-        }
+                 conexion.abrirConexion();
+                 query.ejecutarAccion();
+             }
+             catch (Exception ex)
+             {
+                 throw ex;
+             }
+             finally
+             {
+                 conexion.cerrarConexion();
+             }
+         }
+        //***************************************************************************************************************
         public void borrarArticulo(Articulo art){
 
             DataAccess conexion = new DataAccess();
@@ -381,10 +382,42 @@ namespace ApplicationService
                 datos.cerrarConexion();
             }
         }
+
+        //*********************************************************************
+
         public int agregarArt(Articulo art)
         {
-            DataAccess conexion = new DataAccess();  // Gestiono la conexión a la base de datos
-            DataManipulator query = new DataManipulator();  // Gestiono la ejecución de consultas
+            // Validaciones de los datos que ingreso del artículo
+            if (string.IsNullOrWhiteSpace(art.Codigo))
+                throw new ArgumentException("El código del artículo es obligatorio.");
+
+            if (string.IsNullOrWhiteSpace(art.Nombre))
+                throw new ArgumentException("El nombre del artículo es obligatorio.");
+
+            if (string.IsNullOrWhiteSpace(art.Descripcion))
+                throw new ArgumentException("La descripción del artículo es obligatoria.");
+
+            if (art.Marca == null || art.Marca.Id <= 0)
+                throw new ArgumentException("La marca del artículo es inválida.");
+
+            if (art.Categoria == null || art.Categoria.Id <= 0)
+                throw new ArgumentException("La categoría del artículo es inválida.");
+
+            if (art.Precio <= 0 || art.Precio == null)
+                throw new ArgumentException("El precio del artículo debe ser mayor que cero.");
+
+            // Validar la URL de la imagen si existe
+            if (art.Imagen != null && !string.IsNullOrWhiteSpace(art.Imagen.ImagenUrl))
+            {
+                string urlPattern = @"^((https?|ftp):\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:\d{1,5})?(\/\S*)?$";
+                if (!System.Text.RegularExpressions.Regex.IsMatch(art.Imagen.ImagenUrl, urlPattern))
+                {
+                    throw new ArgumentException("La URL de la imagen no es válida. Ingrese una URL en formato correcto.");
+                }
+            }
+
+            DataAccess conexion = new DataAccess();
+            DataManipulator query = new DataManipulator();
 
             try
             {
@@ -420,6 +453,73 @@ namespace ApplicationService
                 conexion.cerrarConexion();
             }
         }
+
+
+
+
+        //********************************************************************
+
+
+        /* public int agregarArt(Articulo art)
+         {
+             // Validaciones de los datos que ingreso del artículo
+             if (string.IsNullOrWhiteSpace(art.Codigo))
+                 throw new ArgumentException("El código del artículo es obligatorio.");
+
+             if (string.IsNullOrWhiteSpace(art.Nombre))
+                 throw new ArgumentException("El nombre del artículo es obligatorio.");
+
+             if (string.IsNullOrWhiteSpace(art.Descripcion))
+                 throw new ArgumentException("La descripción del artículo es obligatoria.");
+
+             if (art.Marca == null || art.Marca.Id <= 0)
+                 throw new ArgumentException("La marca del artículo es inválida.");
+
+             if (art.Categoria == null || art.Categoria.Id <= 0)
+                 throw new ArgumentException("La categoría del artículo es inválida.");
+
+             if (art.Precio <= 0 || art.Precio == null)
+                 throw new ArgumentException("El precio del artículo debe ser mayor que cero.");
+
+             DataAccess conexion = new DataAccess();
+             DataManipulator query = new DataManipulator();
+
+             try
+             {
+                 // Configuro query de inserción y recuperación del ID insertado
+                 query.configSqlQuery("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES(@codArt, @nombreArt, @descArt, @idMarca, @idCategoria, @precioArt); SELECT SCOPE_IDENTITY();");
+
+                 // Configuro conexión a DB
+                 query.configSqlConexion(conexion.obtenerConexion());
+
+                 // Abro la conexión
+                 conexion.abrirConexion();
+
+                 // Parámetros de la query
+                 query.configSqlParams("@codArt", art.Codigo);
+                 query.configSqlParams("@nombreArt", art.Nombre);
+                 query.configSqlParams("@descArt", art.Descripcion);
+                 query.configSqlParams("@idMarca", art.Marca.Id);
+                 query.configSqlParams("@idCategoria", art.Categoria.Id);
+                 query.configSqlParams("@precioArt", art.Precio);
+
+                 // Ejecutar la query y obtener el ID generado
+                 int idGenerado = Convert.ToInt32(query.ejecutarEscalar());
+
+                 return idGenerado;
+             }
+             catch (Exception ex)
+             {
+                 throw new Exception("Error al insertar el artículo en la base de datos", ex);
+             }
+             finally
+             {
+                 // Cierro la conexión
+                 conexion.cerrarConexion();
+             }
+         }*/
+
+
         /*//FUNCIONES OPCIONALES 
         public List<Articulo> listaFiltradaXMarca(string marca)
         {

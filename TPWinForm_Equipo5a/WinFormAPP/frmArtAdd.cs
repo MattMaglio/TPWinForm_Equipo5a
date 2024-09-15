@@ -201,23 +201,58 @@ namespace WinFormAPP
         {
             cargarImagen(tbImgArt.Text);
         }
+        //********************************************************************************
         private void btnAddUrl_Click(object sender, EventArgs e)
         {
             try
             {
-                img = new Imagen();
+                
+
+                // Verificar que la URL ingresada es válida
+                string urlPattern = @"^((https?|ftp):\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:\d{1,5})?(\/\S*)?$";
+                if (!System.Text.RegularExpressions.Regex.IsMatch(tbImgArt.Text, urlPattern))
+                {
+                    MessageBox.Show("La URL ingresada no es válida. Por favor, ingrese una URL en formato correcto.");
+                    return;
+                }
+
+                // Inicializar el objeto img y asignar sus valores
+                Imagen img = new Imagen();
+                
                 img.ImagenUrl = tbImgArt.Text;
+
+                // Agregar la imagen a la lista
                 listImg.Add(img);
                 cargarDGV();
 
-
-                MessageBox.Show("Url agregada");
+                MessageBox.Show("URL agregada correctamente.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error al agregar la URL: " + ex.Message);
             }
         }
+
+
+        //********************************************************************************
+        /* private void btnAddUrl_Click(object sender, EventArgs e)
+         {
+             try
+             {
+                 img = new Imagen();
+                 img.ImagenUrl = tbImgArt.Text;
+                 listImg.Add(img);
+                 cargarDGV();
+
+
+                 MessageBox.Show("Url agregada");
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.ToString());
+             }
+         }*/
+        //*********************************************************************************
         private void btnDelUrl_Click(object sender, EventArgs e)
         {
             try
