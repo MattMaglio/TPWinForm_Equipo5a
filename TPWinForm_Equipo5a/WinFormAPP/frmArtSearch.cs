@@ -237,7 +237,76 @@ namespace WinFormAPP
         {
             cargarFormularioDisable();
         }
+
+        //**************************************************************************************
         private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ArticuloAS artAS = new ArticuloAS();
+                Articulo art = new Articulo();
+
+                // Validar el nombre
+                if (string.IsNullOrWhiteSpace(tbNomArt.Text))
+                {
+                    MessageBox.Show("El nombre del artículo es obligatorio.");
+                    return;
+                }
+
+                // Validar la descripción
+                if (string.IsNullOrWhiteSpace(tbDescArt.Text))
+                {
+                    MessageBox.Show("La descripción del artículo es obligatoria.");
+                    return;
+                }
+
+                // Validar que se haya seleccionado una categoría
+                if (cboCatArt.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar una categoría.");
+                    return;
+                }
+
+                // Validar que se haya seleccionado una marca
+                if (cboMarcaArt.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar una marca.");
+                    return;
+                }
+
+                // Validar y convertir el precio
+                decimal precio;
+                if (!decimal.TryParse(tbPreArt.Text, out precio) || precio <= 0)
+                {
+                    MessageBox.Show("El precio debe ser un número válido mayor que cero.");
+                    return;
+                }
+
+                // Asignar los valores al objeto Articulo
+                art.Codigo = tbCodArt.Text;
+                art.Nombre = tbNomArt.Text;
+                art.Descripcion = tbDescArt.Text;
+                art.Categoria = (Categoria)cboCatArt.SelectedItem;
+                art.Marca = (Marca)cboMarcaArt.SelectedItem;
+                art.Precio = precio;
+
+                // Llamar al método de actualización
+                artAS.actualizarArticulo(art);
+
+                // Actualizar el formulario
+                cargarFormularioDisable();
+                cargarArticuloBuscado();
+                btnDeletArt.Enabled = true;
+                btnModArt.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar el artículo: " + ex.Message);
+            }
+        }
+
+        //**************************************************************************************
+        /*private void btnGuardar_Click(object sender, EventArgs e)
         {
             ArticuloAS artAS = new ArticuloAS();
 
@@ -252,8 +321,52 @@ namespace WinFormAPP
             btnDeletArt.Enabled = true;
             btnModArt.Enabled = true;
 
-        }
+        }*/
+        //****************************************************************************************
         private void btnAddUrl_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Asegúrate de inicializar el objeto img
+                Imagen img = new Imagen();
+                ImagenAS imgAS = new ImagenAS();
+
+                // Asegúrate de que el artículo tenga un Id válido antes de asignarlo a img
+                if (art == null || art.Id <= 0)
+                {
+                    MessageBox.Show("El artículo no es válido.");
+                    return;
+                }
+
+                // Patrón mejorado para validar URLs con Regex
+                string urlPattern = @"^((https?|ftp):\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:\d{1,5})?(\/\S*)?$";
+                if (!System.Text.RegularExpressions.Regex.IsMatch(tbImgArt.Text, urlPattern))
+                {
+                    MessageBox.Show("La URL ingresada no es válida. Por favor, ingrese una URL en formato correcto.");
+                    return;
+                }
+
+                // Asignar valores a las propiedades de img
+                img.IdArticulo = art.Id;
+                img.ImagenUrl = tbImgArt.Text;
+
+                // Guardar la imagen en la base de datos
+                imgAS.agregarImagen(img);
+                MessageBox.Show("URL agregada");
+
+                // Actualizar el formulario
+                cargarFormularioEnable();
+                cargarArticuloBuscado();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        //****************************************************************************************
+        /*private void btnAddUrl_Click(object sender, EventArgs e)
         {
             try
             {
@@ -271,7 +384,9 @@ namespace WinFormAPP
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
+        }*/
+
+        //****************************************************************************************
         private void btnDelUrl_Click(object sender, EventArgs e)
         {
             try
