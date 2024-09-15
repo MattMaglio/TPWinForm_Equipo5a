@@ -17,8 +17,8 @@ namespace WinFormAPP
 {
     public partial class frmArtAdd : Form
     {
-        private Articulo articulo = new Articulo(); // variable que utilizo para el pasaje entre ventanas
-        private bool modoVerDetalle = false;
+        private Articulo articulo = null; // variable que utilizo para el pasaje entre ventanas
+       // private bool modoVerDetalle = false;
         private int modoModificar = 0; // var para modo modificar
         List<Imagen> listImg =new List<Imagen>(); // Contenedor de la imagen al agregarla al articulo.
         private Imagen img = null; // Propiedad para manejar el control de la grid de imagenes.
@@ -30,10 +30,12 @@ namespace WinFormAPP
         {
             InitializeComponent();
             this.articulo = articulo;
+            PrecargarDatosArticulo();
             if (modoVerDetalle)// si es modo ver detalle articulo
             {
-                lbTituloArtAltas.Text = "Detalle articulo";
+                lbTituloArtAltas.Text = "Detallé del articulo";
                 btnAddArt.Visible = false;
+                btnCancelAdd.Visible = true;
                 foreach (Control control in this.Controls)
                 {
                   if (control is TextBox)
@@ -44,8 +46,8 @@ namespace WinFormAPP
                   }
                 }
                 //CENTRAMOS BOTON CANCELAR EN MODO VER DETALLE
-                btnCancelAdd.Left = (this.ClientSize.Width - btnCancelAdd.Width) / 2;
-                btnCancelAdd.Top = (this.ClientSize.Height - btnCancelAdd.Height) / 2+120;
+               // btnCancelAdd.Left = (this.ClientSize.Width - btnCancelAdd.Width) / 2;
+                //btnCancelAdd.Top = (this.ClientSize.Height - btnCancelAdd.Height) / 2;
 
                 //lbExitoArtAdd.Visible = false;
                 
@@ -56,6 +58,25 @@ namespace WinFormAPP
             }
 
 
+        }
+        private void PrecargarDatosArticulo()
+        {
+            /*// Suponiendo que tienes controles TextBox o ComboBox para cada campo del artículo
+            tbNomArt.Text = articulo.Nombre;
+            tbDescArt.Text = articulo.Descripcion;
+            // Si tienes un ComboBox para la marca
+            cboMarcaArt.SelectedValue = articulo.Marca.Id;
+            // Si tienes un ComboBox para la categoría
+            cboCatArt .SelectedValue = articulo.Categoria.Id;
+            // Precargar URL de la imagen si tienes un PictureBox
+           /* if (!string.IsNullOrEmpty(articulo.Imagen.ImagenUrl))
+            {
+                pbArt.Load(articulo.Imagen.ImagenUrl);
+            }
+            else
+            {
+                pbArt.Image = null; // O cargar una imagen por defecto
+            }*/
         }
         public frmArtAdd(Articulo articuloModificar, int modoModificar)// Duplico el constructor para utilizar la ventana en boton mod
         {
@@ -114,6 +135,22 @@ namespace WinFormAPP
                 cboMarcaArt.ValueMember = "Id";
                 cboMarcaArt.DisplayMember = "Descripcion";
                 cboMarcaArt.SelectedValue = -1;
+
+                if(articulo != null) // modo ver detalle 
+                {
+                    tbCodArt.Text = articulo.Codigo;
+                    tbNomArt.Text = articulo.Nombre;
+                    tbDescArt.Text = articulo.Descripcion;
+                    tbPreArt.Text = articulo.Precio.ToString();
+
+                    cboCatArt.ValueMember = "Id";
+                    cboCatArt.DisplayMember = "Descripcion";
+                    //cboCatArt.SelectedValue = -1;
+
+                    cboMarcaArt.ValueMember = "Id";
+                    cboMarcaArt.DisplayMember = "Descripcion";
+                    //cboMarcaArt.SelectedValue = -1;
+                }
 
 
             }

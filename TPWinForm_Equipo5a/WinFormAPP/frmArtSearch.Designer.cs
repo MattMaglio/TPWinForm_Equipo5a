@@ -52,8 +52,9 @@
             this.pbArt = new System.Windows.Forms.PictureBox();
             this.btnDelUrl = new System.Windows.Forms.Button();
             this.gbUrl = new System.Windows.Forms.GroupBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelarBusquedaArt = new System.Windows.Forms.Button();
             this.gbSearchArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrlImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
@@ -65,7 +66,7 @@
             this.lbTituloArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTituloArt.AutoSize = true;
             this.lbTituloArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloArt.Location = new System.Drawing.Point(381, 9);
+            this.lbTituloArt.Location = new System.Drawing.Point(303, 9);
             this.lbTituloArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTituloArt.Name = "lbTituloArt";
             this.lbTituloArt.Size = new System.Drawing.Size(226, 25);
@@ -75,7 +76,7 @@
             // btnSeachArt
             // 
             this.btnSeachArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSeachArt.Location = new System.Drawing.Point(457, 62);
+            this.btnSeachArt.Location = new System.Drawing.Point(388, 49);
             this.btnSeachArt.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeachArt.Name = "btnSeachArt";
             this.btnSeachArt.Size = new System.Drawing.Size(141, 27);
@@ -115,7 +116,7 @@
             // tbImgArt
             // 
             this.tbImgArt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbImgArt.Location = new System.Drawing.Point(137, 21);
+            this.tbImgArt.Location = new System.Drawing.Point(144, 21);
             this.tbImgArt.Margin = new System.Windows.Forms.Padding(4);
             this.tbImgArt.Name = "tbImgArt";
             this.tbImgArt.Size = new System.Drawing.Size(361, 20);
@@ -140,7 +141,7 @@
             // tbCodArt
             // 
             this.tbCodArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbCodArt.Location = new System.Drawing.Point(334, 65);
+            this.tbCodArt.Location = new System.Drawing.Point(264, 52);
             this.tbCodArt.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodArt.Name = "tbCodArt";
             this.tbCodArt.Size = new System.Drawing.Size(116, 20);
@@ -160,7 +161,7 @@
             // 
             this.lbImgArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbImgArt.AutoSize = true;
-            this.lbImgArt.Location = new System.Drawing.Point(32, 23);
+            this.lbImgArt.Location = new System.Drawing.Point(39, 23);
             this.lbImgArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbImgArt.Name = "lbImgArt";
             this.lbImgArt.Size = new System.Drawing.Size(98, 14);
@@ -211,7 +212,7 @@
             // 
             this.lbCodArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbCodArt.AutoSize = true;
-            this.lbCodArt.Location = new System.Drawing.Point(215, 67);
+            this.lbCodArt.Location = new System.Drawing.Point(145, 54);
             this.lbCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCodArt.Name = "lbCodArt";
             this.lbCodArt.Size = new System.Drawing.Size(116, 14);
@@ -231,11 +232,11 @@
             this.gbSearchArt.Controls.Add(this.lbPreArt);
             this.gbSearchArt.Controls.Add(this.tbDescArt);
             this.gbSearchArt.Controls.Add(this.tbNomArt);
-            this.gbSearchArt.Location = new System.Drawing.Point(215, 133);
+            this.gbSearchArt.Location = new System.Drawing.Point(142, 126);
             this.gbSearchArt.Margin = new System.Windows.Forms.Padding(4);
             this.gbSearchArt.Name = "gbSearchArt";
             this.gbSearchArt.Padding = new System.Windows.Forms.Padding(4);
-            this.gbSearchArt.Size = new System.Drawing.Size(584, 205);
+            this.gbSearchArt.Size = new System.Drawing.Size(598, 205);
             this.gbSearchArt.TabIndex = 33;
             this.gbSearchArt.TabStop = false;
             this.gbSearchArt.Text = "Articulo:";
@@ -243,7 +244,7 @@
             // btnAddUrl
             // 
             this.btnAddUrl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddUrl.Location = new System.Drawing.Point(137, 49);
+            this.btnAddUrl.Location = new System.Drawing.Point(144, 49);
             this.btnAddUrl.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddUrl.Name = "btnAddUrl";
             this.btnAddUrl.Size = new System.Drawing.Size(80, 24);
@@ -255,45 +256,47 @@
             // btnModArt
             // 
             this.btnModArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModArt.Location = new System.Drawing.Point(222, 93);
+            this.btnModArt.BackColor = System.Drawing.Color.White;
+            this.btnModArt.Location = new System.Drawing.Point(142, 84);
             this.btnModArt.Margin = new System.Windows.Forms.Padding(4);
             this.btnModArt.Name = "btnModArt";
-            this.btnModArt.Size = new System.Drawing.Size(141, 34);
+            this.btnModArt.Size = new System.Drawing.Size(155, 34);
             this.btnModArt.TabIndex = 34;
             this.btnModArt.Text = "Modificar artículo";
-            this.btnModArt.UseVisualStyleBackColor = true;
+            this.btnModArt.UseVisualStyleBackColor = false;
             this.btnModArt.Click += new System.EventHandler(this.btnModArt_Click);
             // 
             // btnDeletArt
             // 
             this.btnDeletArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDeletArt.Location = new System.Drawing.Point(370, 93);
+            this.btnDeletArt.BackColor = System.Drawing.Color.Red;
+            this.btnDeletArt.Location = new System.Drawing.Point(290, 84);
             this.btnDeletArt.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletArt.Name = "btnDeletArt";
-            this.btnDeletArt.Size = new System.Drawing.Size(141, 34);
+            this.btnDeletArt.Size = new System.Drawing.Size(155, 34);
             this.btnDeletArt.TabIndex = 35;
             this.btnDeletArt.Text = "Eliminar artículo";
-            this.btnDeletArt.UseVisualStyleBackColor = true;
+            this.btnDeletArt.UseVisualStyleBackColor = false;
             this.btnDeletArt.Click += new System.EventHandler(this.btnDeletArt_Click);
             // 
             // dgvUrlImg
             // 
             this.dgvUrlImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvUrlImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUrlImg.Location = new System.Drawing.Point(7, 79);
+            this.dgvUrlImg.Location = new System.Drawing.Point(15, 79);
             this.dgvUrlImg.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUrlImg.Name = "dgvUrlImg";
-            this.dgvUrlImg.Size = new System.Drawing.Size(280, 259);
+            this.dgvUrlImg.Size = new System.Drawing.Size(280, 192);
             this.dgvUrlImg.TabIndex = 36;
             this.dgvUrlImg.SelectionChanged += new System.EventHandler(this.dgvUrlImg_SelectionChanged);
             // 
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbArt.Location = new System.Drawing.Point(297, 79);
+            this.pbArt.Location = new System.Drawing.Point(302, 79);
             this.pbArt.Margin = new System.Windows.Forms.Padding(4);
             this.pbArt.Name = "pbArt";
-            this.pbArt.Size = new System.Drawing.Size(280, 259);
+            this.pbArt.Size = new System.Drawing.Size(282, 192);
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 37;
             this.pbArt.TabStop = false;
@@ -301,7 +304,7 @@
             // btnDelUrl
             // 
             this.btnDelUrl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelUrl.Location = new System.Drawing.Point(224, 49);
+            this.btnDelUrl.Location = new System.Drawing.Point(231, 49);
             this.btnDelUrl.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelUrl.Name = "btnDelUrl";
             this.btnDelUrl.Size = new System.Drawing.Size(80, 24);
@@ -313,53 +316,70 @@
             // gbUrl
             // 
             this.gbUrl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gbUrl.Controls.Add(this.btnCancelar);
+            this.gbUrl.Controls.Add(this.btnGuardar);
             this.gbUrl.Controls.Add(this.lbImgArt);
             this.gbUrl.Controls.Add(this.dgvUrlImg);
             this.gbUrl.Controls.Add(this.pbArt);
             this.gbUrl.Controls.Add(this.btnAddUrl);
             this.gbUrl.Controls.Add(this.tbImgArt);
             this.gbUrl.Controls.Add(this.btnDelUrl);
-            this.gbUrl.Location = new System.Drawing.Point(215, 345);
+            this.gbUrl.Location = new System.Drawing.Point(142, 323);
             this.gbUrl.Margin = new System.Windows.Forms.Padding(4);
             this.gbUrl.Name = "gbUrl";
             this.gbUrl.Padding = new System.Windows.Forms.Padding(4);
-            this.gbUrl.Size = new System.Drawing.Size(584, 344);
+            this.gbUrl.Size = new System.Drawing.Size(598, 344);
             this.gbUrl.TabIndex = 38;
             this.gbUrl.TabStop = false;
             this.gbUrl.Text = "Lista de Imagenes por Articulo";
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGuardar.Location = new System.Drawing.Point(361, 697);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(141, 38);
-            this.btnGuardar.TabIndex = 39;
-            this.btnGuardar.Text = "Guardar cambios";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancelar.Location = new System.Drawing.Point(512, 697);
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(302, 285);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(141, 38);
             this.btnCancelar.TabIndex = 40;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCanelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGuardar.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(151, 285);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(141, 38);
+            this.btnGuardar.TabIndex = 39;
+            this.btnGuardar.Text = "Guardar cambios";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelarBusquedaArt
+            // 
+            this.btnCancelarBusquedaArt.BackColor = System.Drawing.Color.Red;
+            this.btnCancelarBusquedaArt.Location = new System.Drawing.Point(537, 49);
+            this.btnCancelarBusquedaArt.Name = "btnCancelarBusquedaArt";
+            this.btnCancelarBusquedaArt.Size = new System.Drawing.Size(124, 26);
+            this.btnCancelarBusquedaArt.TabIndex = 39;
+            this.btnCancelarBusquedaArt.Text = "Cancelar";
+            this.btnCancelarBusquedaArt.UseVisualStyleBackColor = false;
+            this.btnCancelarBusquedaArt.Click += new System.EventHandler(this.btnCancelarBusquedaArt_Click);
             // 
             // frmArtSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 761);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(830, 661);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnCancelarBusquedaArt);
             this.Controls.Add(this.gbUrl);
             this.Controls.Add(this.btnDeletArt);
             this.Controls.Add(this.btnModArt);
@@ -370,9 +390,10 @@
             this.Controls.Add(this.lbTituloArt);
             this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmArtSearch";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmArtSearch";
             this.Load += new System.EventHandler(this.frmArtSearch_Load);
             this.gbSearchArt.ResumeLayout(false);
@@ -414,5 +435,6 @@
         private System.Windows.Forms.GroupBox gbUrl;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCancelarBusquedaArt;
     }
 }

@@ -26,15 +26,15 @@ namespace WinFormAPP
         private Imagen img = null;
         public frmArtSearch()
         {
-            InitializeComponent();
+            InitializeComponent();//MODO DE INICIALIZACION DEL FORMULARIO
+           
         }
 
         public frmArtSearch(int estado, Articulo artListado)
         {
             InitializeComponent();
 
-            
-            if (estado == 1) // Mod
+            if (estado == 1) // Modificar
             {
                 
                 lbTituloArt.Text = "Modificación de artículos";
@@ -46,7 +46,9 @@ namespace WinFormAPP
             }
             else if (estado == 2) // Ver detalle
             {
-                cargarFormularioDisable();
+                lbTituloArt.Text = "Detallé del artículos";
+
+               // cargarFormularioDisable();
                 cargarArticuloBuscado(artListado);
             }
 
@@ -83,8 +85,6 @@ namespace WinFormAPP
                 tbDescArt.Text = artListado.Descripcion.ToString();
                 cboCatArt.SelectedValue = artListado.Categoria.Id;
                 cboMarcaArt.SelectedValue = artListado.Marca.Id;
-                tbPreArt.Text = artListado.Precio.ToString();
-
                 listUrl = img.listarFiltrado(tbCodArt.Text);
                 dgvUrlImg.DataSource = listUrl;
                 dgvUrlImg.Columns["Id"].Visible = false;
@@ -407,6 +407,11 @@ namespace WinFormAPP
         private void btnCanelar_Click(object sender, EventArgs e)
         {
             cargarFormularioDisable();
+        }
+
+        private void btnCancelarBusquedaArt_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
