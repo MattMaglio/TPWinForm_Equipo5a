@@ -78,5 +78,10 @@ namespace WinFormAPP
             wndListArt.Dock = DockStyle.Fill;
             wndListArt.Show();
         }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Por favor comuniquese con el soporte tecnico, gracias!");
+        }
     }
 }
