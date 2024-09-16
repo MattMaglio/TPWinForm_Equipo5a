@@ -270,7 +270,7 @@
             // 
             this.btnDeletArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeletArt.BackColor = System.Drawing.Color.Red;
-            this.btnDeletArt.Location = new System.Drawing.Point(290, 84);
+            this.btnDeletArt.Location = new System.Drawing.Point(308, 84);
             this.btnDeletArt.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletArt.Name = "btnDeletArt";
             this.btnDeletArt.Size = new System.Drawing.Size(155, 34);
