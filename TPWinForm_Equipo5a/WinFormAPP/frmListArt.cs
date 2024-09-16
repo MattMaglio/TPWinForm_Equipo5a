@@ -68,10 +68,6 @@ namespace WinFormAPP
             listArt = artAS.listarVersatil(marca, cate);
             dgvArt.DataSource = listArt;
             ocultarColumnas();
-            //if (listArt.Count > 0)
-            //{
-            //    pboxImagenUrl.Load(listArt[0].Imagen.ImagenUrl);
-            //}
 
         }
         private void ocultarColumnas()
@@ -157,30 +153,32 @@ namespace WinFormAPP
         {
             Articulo articulo = new Articulo();
             articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
-            int accion = 1;
+            bool modificar = true;
 
-            frmArtSearch articuloModificar = new frmArtSearch(accion, articulo);
+            //frmArtSearch articuloModificar = new frmArtSearch(accion, articulo);
 
-           
-            if (articuloModificar.ShowDialog() == DialogResult.OK)
+            frmArtAdd articuloModificar = new frmArtAdd(articulo, modificar);
+
+            articuloModificar.Show();
+
+            /*if (articuloModificar.ShowDialog() == DialogResult.OK)
             {  
                 cargar();
                 Close();
-            }
+            }*/
 
         }
         private void btnVerDetalleArt_Click(object sender, EventArgs e)
         {
             Articulo articulo = new Articulo();
             articulo = (Articulo)dgvArt.CurrentRow.DataBoundItem;
-            //int accion = 2;
-            bool estado = true;
+            int accion = 2;
 
-            //frmArtSearch articuloDetalle = new frmArtSearch(accion, articulo);
-            frmArtAdd articuloDetalle= new frmArtAdd(articulo, estado);
+            frmArtSearch articuloDetalle = new frmArtSearch(accion, articulo);
+
             if (articuloDetalle.ShowDialog() == DialogResult.OK)
             {
-
+            
                 cargar();
                 Close();
             }

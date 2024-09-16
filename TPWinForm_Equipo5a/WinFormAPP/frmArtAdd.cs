@@ -19,45 +19,12 @@ namespace WinFormAPP
     {
         private Articulo articulo = null; // variable que utilizo para el pasaje entre ventanas
        // private bool modoVerDetalle = false;
-        private int modoModificar = 0; // var para modo modificar
+        private bool modoModificar = false; // var para modo modificar
         List<Imagen> listImg =new List<Imagen>(); // Contenedor de la imagen al agregarla al articulo.
         private Imagen img = null; // Propiedad para manejar el control de la grid de imagenes.
         public frmArtAdd()
         {
             InitializeComponent();
-        }
-        public frmArtAdd(Articulo articulo ,bool modoVerDetalle)// Duplico para utilizar la ventana de ver detalle
-        {
-            InitializeComponent();
-            this.articulo = articulo;
-            PrecargarDatosArticulo();
-            if (modoVerDetalle)// si es modo ver detalle articulo
-            {
-                lbTituloArtAltas.Text = "Detallé del articulo";
-                btnAddArt.Visible = false;
-                btnCancelAdd.Visible = true;
-                foreach (Control control in this.Controls)
-                {
-                  if (control is TextBox)
-                  {
-                    ((TextBox)control).Enabled = false;
-                  }else if(control is ComboBox) {
-                    ((ComboBox)control).Enabled = false;
-                  }
-                }
-                //CENTRAMOS BOTON CANCELAR EN MODO VER DETALLE
-               // btnCancelAdd.Left = (this.ClientSize.Width - btnCancelAdd.Width) / 2;
-                //btnCancelAdd.Top = (this.ClientSize.Height - btnCancelAdd.Height) / 2;
-
-                //lbExitoArtAdd.Visible = false;
-                
-            }
-            else
-            {
-                lbTituloArtAltas.Text = "Agregar articulo";
-            }
-
-
         }
         private void PrecargarDatosArticulo()
         {
@@ -78,15 +45,20 @@ namespace WinFormAPP
                 pbArt.Image = null; // O cargar una imagen por defecto
             }*/
         }
-        public frmArtAdd(Articulo articuloModificar, int modoModificar)// Duplico el constructor para utilizar la ventana en boton mod
+        public frmArtAdd(Articulo articuloModificar, bool modoModificar)// Duplico el constructor para utilizar la ventana en boton mod
         {
             InitializeComponent();
             this.articulo = articuloModificar;
-             CargarDatos();
+            this.modoModificar = modoModificar;
+            
+            CargarDatos();
         }
         private void CargarDatos()
-        {
-            if (modoModificar == 0)
+        {   
+            ImagenAS imgAS = new ImagenAS();
+            listImg = imgAS.listarFiltrado(articulo.Codigo);
+
+            if (modoModificar == true)
             {
                 // Configuracion del  formulario para modificar
                 lbTituloArtAltas.Text = "Modificar artículo";
@@ -96,9 +68,9 @@ namespace WinFormAPP
                 tbNomArt.Text = articulo.Nombre;
                 tbDescArt.Text = articulo.Descripcion;
                 tbPreArt.Text = articulo.Precio.ToString();
-                tbImgArt.Text = articulo.Imagen.ImagenUrl;
                 cboMarcaArt.Text = articulo.Marca.Descripcion;
                 cboCatArt.Text = articulo.Categoria.Descripcion;
+                tbCodArt.ReadOnly = true;
                 cargarDGV();
                 // Configurar otros controles según sea necesario
             }
@@ -113,16 +85,22 @@ namespace WinFormAPP
         }
         private void frmArtAdd_Load(object sender, EventArgs e)
         {
+            this.Enabled = true;
+
             MarcaAS marca = new MarcaAS();
             CategoriaAS categoria = new CategoriaAS();
-
-
-            try
+            
+            if (articulo == null)
             {
-
-                cboMarcaArt.DataSource = marca.listar();
-                cboCatArt.DataSource = categoria.listar();
+                articulo = new Articulo();
                 
+            }
+
+            cboMarcaArt.DataSource = marca.listar();
+            cboCatArt.DataSource = categoria.listar();
+
+            if (modoModificar == true) // modificacíon
+            {
                 tbCodArt.Text = articulo.Codigo;
                 tbNomArt.Text = articulo.Nombre;
                 tbDescArt.Text = articulo.Descripcion;
@@ -130,14 +108,18 @@ namespace WinFormAPP
 
                 cboCatArt.ValueMember = "Id";
                 cboCatArt.DisplayMember = "Descripcion";
-                cboCatArt.SelectedValue = -1;
 
                 cboMarcaArt.ValueMember = "Id";
                 cboMarcaArt.DisplayMember = "Descripcion";
-                cboMarcaArt.SelectedValue = -1;
 
-                if(articulo != null) // modo ver detalle 
+                cboCatArt.SelectedValue = articulo.Categoria.Id;
+                cboMarcaArt.SelectedValue = articulo.Marca.Id;
+            }
+            else
+            {
+                try
                 {
+
                     tbCodArt.Text = articulo.Codigo;
                     tbNomArt.Text = articulo.Nombre;
                     tbDescArt.Text = articulo.Descripcion;
@@ -145,20 +127,23 @@ namespace WinFormAPP
 
                     cboCatArt.ValueMember = "Id";
                     cboCatArt.DisplayMember = "Descripcion";
-                    //cboCatArt.SelectedValue = -1;
-
+                    
                     cboMarcaArt.ValueMember = "Id";
                     cboMarcaArt.DisplayMember = "Descripcion";
-                    //cboMarcaArt.SelectedValue = -1;
+
+                    cboMarcaArt.SelectedValue = -1;
+                    cboCatArt.SelectedValue = -1;
+
+
                 }
+                catch (Exception ex)
+                {
 
-
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
 
-                MessageBox.Show(ex.ToString());
-            }
+            
         }
         private void btnAddArt_Click(object sender, EventArgs e)
         {
@@ -169,26 +154,66 @@ namespace WinFormAPP
 
             try
             {
-                if(modoModificar == 1)
+                if(modoModificar == true)
                 {
-                    // Modificar artículo
-                    articulo.Codigo = tbCodArt.Text;
-                    articulo.Nombre = tbNomArt.Text;
-                    articulo.Descripcion = tbDescArt.Text;
-                    articulo.Precio = decimal.Parse(tbPreArt.Text);
-                    articulo.Marca.Descripcion = cboMarcaArt.Text;
-                    articulo.Categoria.Descripcion = cboCatArt.Text;
-                    articulo.Imagen.ImagenUrl = tbImgArt.Text;
-                    lbTituloArtAltas.Text = "Modificar artículo";
-                    btnAddArt.Text = "Guardar artículo";
+
+                    try
+                    {
+                        
+                        // Validar el nombre
+                        if (string.IsNullOrWhiteSpace(tbNomArt.Text))
+                        {
+                            MessageBox.Show("El nombre del artículo es obligatorio.");
+                            return;
+                        }
+
+                        // Validar la descripción
+                        if (string.IsNullOrWhiteSpace(tbDescArt.Text))
+                        {
+                            MessageBox.Show("La descripción del artículo es obligatoria.");
+                            return;
+                        }
+
+                        // Validar que se haya seleccionado una categoría
+                        if (cboCatArt.SelectedItem == null)
+                        {
+                            MessageBox.Show("Debe seleccionar una categoría.");
+                            return;
+                        }
+
+                        // Validar que se haya seleccionado una marca
+                        if (cboMarcaArt.SelectedItem == null)
+                        {
+                            MessageBox.Show("Debe seleccionar una marca.");
+                            return;
+                        }
+
+                        // Validar y convertir el precio
+                        decimal precio;
+                        if (!decimal.TryParse(tbPreArt.Text, out precio) || precio <= 0)
+                        {
+                            MessageBox.Show("El precio debe ser un número válido mayor que cero.");
+                            return;
+                        }
+
+                        // Asignar los valores al objeto Articulo
+                        art.Codigo = tbCodArt.Text;
+                        art.Nombre = tbNomArt.Text;
+                        art.Descripcion = tbDescArt.Text;
+                        art.Categoria = (Categoria)cboCatArt.SelectedItem;
+                        art.Marca = (Marca)cboMarcaArt.SelectedItem;
+                        art.Precio = precio;
+
+                        // Llamar al método de actualización
+                        artAS.actualizarArticulo(art);
+                        imgAS.agegarImagenesArtNuevo(listImg,art);
 
 
-                    // Actualizar el artículo en la base de datos
-                    artAS.actualizarArticulo(articulo);
-                    MessageBox.Show("Artículo modificado exitosamente");
-                    
-                   Close();
-
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar el artículo: " + ex.Message);
+                    }
                     
                 }
                 else
@@ -269,8 +294,6 @@ namespace WinFormAPP
                 MessageBox.Show("Error al agregar la URL: " + ex.Message);
             }
         }
-
-
         //********************************************************************************
         /* private void btnAddUrl_Click(object sender, EventArgs e)
          {
@@ -311,8 +334,10 @@ namespace WinFormAPP
             {
                 img = (Imagen)dgvUrlImg.CurrentRow.DataBoundItem;
                 cargarImagen(img.ImagenUrl);
-                tbImgArt.Clear();
+                tbImgArt.Text = img.ImagenUrl;
+
             }
         }
+
     }
 }

@@ -43,13 +43,20 @@ namespace ApplicationService
 
             try
             {
+                query.configSqlQuery("SELECT Id FROM ARTICULOS where Codigo = @art");
+                query.configSqlConexion(conexion.obtenerConexion());
+                query.configSqlParams("@art", art.Codigo);
+
+                conexion.abrirConexion();
+                int idGenerado = Convert.ToInt32(query.ejecutarEscalar());
+
                 foreach (var img in listImg)
                 {
                     try
                     {
-                        query.configSqlQuery("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES(@IdArt, @UrlImg)");
+                        query.configSqlQuery("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArt, @UrlImg)");
                         query.configSqlConexion(conexion.obtenerConexion());
-                        query.configSqlParams("@IdArt", art.Id);
+                        query.configSqlParams("@IdArt", idGenerado);
                         query.configSqlParams("@UrlImg", img.ImagenUrl);
 
                         conexion.abrirConexion();

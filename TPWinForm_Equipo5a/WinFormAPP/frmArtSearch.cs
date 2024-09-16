@@ -24,81 +24,58 @@ namespace WinFormAPP
         private List<Imagen> listUrl;
         private Articulo art = null;
         private Imagen img = null;
-        public frmArtSearch()
-        {
-            InitializeComponent();//MODO DE INICIALIZACION DEL FORMULARIO
-           
-        }
-
+        private int estado = 0;
+        public frmArtSearch();
         public frmArtSearch(int estado, Articulo artListado)
         {
             InitializeComponent();
-
-            if (estado == 1) // Modificar
+            
+            /*
+            if (estado == 3) // Modificar
             {
-                
-                lbTituloArt.Text = "Modificación de artículos";
 
-                cargarFormularioEnable();
-                cargarArticuloBuscado(artListado);
-                btnDeletArt.Enabled = false;
+                tbCodArt.Text = artListado.Codigo;
+                btnSeachArt_Click(this, EventArgs.Empty);
+                btnModArt_Click(this, EventArgs.Empty);
+                lbTituloArt.Text = "Modificación del artículo " + artListado.Codigo;
 
             }
-            else if (estado == 2) // Ver detalle
+            */
+            if (estado == 2) // Ver detalle
             {
-                lbTituloArt.Text = "Detallé del artículos";
+                
+                lbTituloArt.Text = "Detalle del artículo " + artListado.Codigo;
 
-               // cargarFormularioDisable();
-                cargarArticuloBuscado(artListado);
+                tbCodArt.Text = artListado.Codigo;
+                btnSeachArt_Click(this, EventArgs.Empty);
+                btnSeachArt.Enabled = false;
+                this.estado = 2;
+
             }
 
         }
-        public void cargarArticuloBuscado(Articulo artListado = null)
+        public void cargarArticuloBuscado() //Articulo artListado = null
         {
             ImagenAS img = new ImagenAS();
 
-            if (artListado is null)
+            tbNomArt.Text = art.Nombre.ToString();
+            tbDescArt.Text = art.Descripcion.ToString();
+            cboCatArt.SelectedValue = art.Categoria.Id;
+            cboMarcaArt.SelectedValue = art.Marca.Id;
+            listUrl = img.listarFiltrado(tbCodArt.Text);
+            dgvUrlImg.DataSource = listUrl;
+            dgvUrlImg.Columns["Id"].Visible = false;
+            dgvUrlImg.Columns["IdArticulo"].Visible = false;
+            if (listUrl.Any())
             {
-                tbNomArt.Text = art.Nombre.ToString();
-                tbDescArt.Text = art.Descripcion.ToString();
-                cboCatArt.SelectedValue = art.Categoria.Id;
-                cboMarcaArt.SelectedValue = art.Marca.Id;
-                tbPreArt.Text = art.Precio.ToString();
-
-                listUrl = img.listarFiltrado(tbCodArt.Text);
-                dgvUrlImg.DataSource = listUrl;
-                dgvUrlImg.Columns["Id"].Visible = false;
-                dgvUrlImg.Columns["IdArticulo"].Visible = false;
-                if (listUrl.Any())
-                {
-                    cargarImagen(listUrl[0].ImagenUrl);
-                }
-                else
-                {
-                    cargarImagen("sin imagen");
-                    tbImgArt.Text = string.Empty;
-                }
+                cargarImagen(listUrl[0].ImagenUrl);
             }
             else
             {
-                tbNomArt.Text = artListado.Nombre.ToString();
-                tbDescArt.Text = artListado.Descripcion.ToString();
-                cboCatArt.SelectedValue = artListado.Categoria.Id;
-                cboMarcaArt.SelectedValue = artListado.Marca.Id;
-                listUrl = img.listarFiltrado(tbCodArt.Text);
-                dgvUrlImg.DataSource = listUrl;
-                dgvUrlImg.Columns["Id"].Visible = false;
-                dgvUrlImg.Columns["IdArticulo"].Visible = false;
-                if (listUrl.Any())
-                {
-                    cargarImagen(listUrl[0].ImagenUrl);
-                }
-                else
-                {
-                    cargarImagen("sin imagen");
-                    tbImgArt.Text = string.Empty;
-                }
+                cargarImagen("sin imagen");
+                tbImgArt.Text = string.Empty;
             }
+            tbPreArt.Text = art.Precio.ToString();
         }
         public void cargarFormularioDisable()
         {
@@ -112,9 +89,6 @@ namespace WinFormAPP
             cboMarcaArt.DataSource = marca.listar();
             cboMarcaArt.ValueMember = "Id";
             cboMarcaArt.DisplayMember = "Descripcion";
-
-            cboMarcaArt.SelectedValue = -1;
-            cboCatArt.SelectedValue = -1;
 
             tbNomArt.ReadOnly = true;
             tbDescArt.ReadOnly = true;
@@ -211,8 +185,8 @@ namespace WinFormAPP
 
             lbTituloArt.Text = "Modificación de artículos";
             
-            cargarFormularioEnable();
             cargarArticuloBuscado();
+            cargarFormularioEnable();
             btnDeletArt.Enabled = false;            
         }
         private void btnDeletArt_Click(object sender, EventArgs e)
@@ -235,7 +209,32 @@ namespace WinFormAPP
         }
         private void frmArtSearch_Load(object sender, EventArgs e)
         {
-            cargarFormularioDisable();
+            MarcaAS marca = new MarcaAS();
+            CategoriaAS categoria = new CategoriaAS();
+
+            cboMarcaArt.DataSource = marca.listar();
+            cboCatArt.DataSource = categoria.listar();
+
+            if (estado == 2)
+            {
+               
+                    cboCatArt.ValueMember = "Id";
+                    cboCatArt.DisplayMember = "Descripcion";
+
+                    cboMarcaArt.ValueMember = "Id";
+                    cboMarcaArt.DisplayMember = "Descripcion";
+
+                    cboCatArt.SelectedValue = art.Categoria.Id;
+                    cboMarcaArt.SelectedValue = art.Marca.Id;
+            }
+            else
+            {
+                cargarFormularioDisable();
+                cboMarcaArt.SelectedValue = -1;
+                cboCatArt.SelectedValue = -1;
+            }
+
+
         }
 
         //**************************************************************************************
@@ -363,7 +362,6 @@ namespace WinFormAPP
                 MessageBox.Show(ex.ToString());
             }
         }
-
 
         //****************************************************************************************
         /*private void btnAddUrl_Click(object sender, EventArgs e)
