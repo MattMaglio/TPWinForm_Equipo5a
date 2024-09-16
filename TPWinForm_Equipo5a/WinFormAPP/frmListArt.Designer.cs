@@ -50,19 +50,21 @@
             // 
             // dgvArt
             // 
+            this.dgvArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArt.Location = new System.Drawing.Point(17, 144);
             this.dgvArt.MultiSelect = false;
             this.dgvArt.Name = "dgvArt";
             this.dgvArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArt.Size = new System.Drawing.Size(507, 239);
+            this.dgvArt.Size = new System.Drawing.Size(694, 516);
             this.dgvArt.TabIndex = 0;
             this.dgvArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArt_CellContentClick);
             this.dgvArt.SelectionChanged += new System.EventHandler(this.dgvArt_SelectionChanged);
             // 
             // btnVerDetalleArt
             // 
+            this.btnVerDetalleArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVerDetalleArt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnVerDetalleArt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalleArt.Location = new System.Drawing.Point(244, 75);
@@ -75,6 +77,7 @@
             // 
             // btnAgregarArticulo
             // 
+            this.btnAgregarArticulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAgregarArticulo.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAgregarArticulo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarArticulo.Location = new System.Drawing.Point(17, 76);
@@ -87,6 +90,7 @@
             // 
             // btnModificarArticulo
             // 
+            this.btnModificarArticulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificarArticulo.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnModificarArticulo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarArticulo.Location = new System.Drawing.Point(131, 76);
@@ -99,6 +103,7 @@
             // 
             // btnEliminarArticulo
             // 
+            this.btnEliminarArticulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminarArticulo.BackColor = System.Drawing.Color.Crimson;
             this.btnEliminarArticulo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarArticulo.Location = new System.Drawing.Point(357, 75);
@@ -111,6 +116,7 @@
             // 
             // lblCat
             // 
+            this.lblCat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCat.AutoSize = true;
             this.lblCat.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCat.Location = new System.Drawing.Point(336, 42);
@@ -121,6 +127,7 @@
             // 
             // cboCategoria
             // 
+            this.cboCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(416, 42);
             this.cboCategoria.Name = "cboCategoria";
@@ -129,6 +136,7 @@
             // 
             // lblMarca
             // 
+            this.lblMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.Location = new System.Drawing.Point(553, 45);
@@ -139,6 +147,7 @@
             // 
             // cboMarca
             // 
+            this.cboMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(622, 42);
             this.cboMarca.Name = "cboMarca";
@@ -147,6 +156,7 @@
             // 
             // btnFiltrar
             // 
+            this.btnFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFiltrar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnFiltrar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.Location = new System.Drawing.Point(762, 42);
@@ -159,6 +169,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 45);
@@ -170,6 +181,7 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Location = new System.Drawing.Point(90, 41);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(231, 20);
@@ -179,6 +191,7 @@
             // 
             // btnClean
             // 
+            this.btnClean.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnClean.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnClean.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClean.Location = new System.Drawing.Point(762, 80);
@@ -191,9 +204,10 @@
             // 
             // dgvUrlImg
             // 
+            this.dgvUrlImg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvUrlImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUrlImg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvUrlImg.Location = new System.Drawing.Point(546, 397);
+            this.dgvUrlImg.Location = new System.Drawing.Point(735, 407);
             this.dgvUrlImg.MultiSelect = false;
             this.dgvUrlImg.Name = "dgvUrlImg";
             this.dgvUrlImg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -204,7 +218,7 @@
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbArt.Location = new System.Drawing.Point(546, 144);
+            this.pbArt.Location = new System.Drawing.Point(735, 144);
             this.pbArt.Margin = new System.Windows.Forms.Padding(2);
             this.pbArt.Name = "pbArt";
             this.pbArt.Size = new System.Drawing.Size(318, 239);
@@ -216,9 +230,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(894, 549);
+            this.ClientSize = new System.Drawing.Size(1064, 761);
             this.Controls.Add(this.pbArt);
             this.Controls.Add(this.dgvUrlImg);
             this.Controls.Add(this.btnClean);

@@ -58,7 +58,7 @@
             // 
             this.lbCodArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbCodArt.AutoSize = true;
-            this.lbCodArt.Location = new System.Drawing.Point(41, 48);
+            this.lbCodArt.Location = new System.Drawing.Point(105, 105);
             this.lbCodArt.Name = "lbCodArt";
             this.lbCodArt.Size = new System.Drawing.Size(98, 13);
             this.lbCodArt.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.lbNomArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbNomArt.AutoSize = true;
-            this.lbNomArt.Location = new System.Drawing.Point(92, 81);
+            this.lbNomArt.Location = new System.Drawing.Point(156, 138);
             this.lbNomArt.Name = "lbNomArt";
             this.lbNomArt.Size = new System.Drawing.Size(47, 13);
             this.lbNomArt.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.lbDescArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbDescArt.AutoSize = true;
-            this.lbDescArt.Location = new System.Drawing.Point(73, 112);
+            this.lbDescArt.Location = new System.Drawing.Point(137, 169);
             this.lbDescArt.Name = "lbDescArt";
             this.lbDescArt.Size = new System.Drawing.Size(66, 13);
             this.lbDescArt.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             this.lbMarcaArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbMarcaArt.AutoSize = true;
-            this.lbMarcaArt.Location = new System.Drawing.Point(99, 174);
+            this.lbMarcaArt.Location = new System.Drawing.Point(163, 231);
             this.lbMarcaArt.Name = "lbMarcaArt";
             this.lbMarcaArt.Size = new System.Drawing.Size(40, 13);
             this.lbMarcaArt.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             this.lbCatArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbCatArt.AutoSize = true;
-            this.lbCatArt.Location = new System.Drawing.Point(84, 143);
+            this.lbCatArt.Location = new System.Drawing.Point(148, 200);
             this.lbCatArt.Name = "lbCatArt";
             this.lbCatArt.Size = new System.Drawing.Size(55, 13);
             this.lbCatArt.TabIndex = 4;
@@ -108,7 +108,7 @@
             // 
             this.lbPreArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbPreArt.AutoSize = true;
-            this.lbPreArt.Location = new System.Drawing.Point(99, 204);
+            this.lbPreArt.Location = new System.Drawing.Point(163, 261);
             this.lbPreArt.Name = "lbPreArt";
             this.lbPreArt.Size = new System.Drawing.Size(40, 13);
             this.lbPreArt.TabIndex = 6;
@@ -117,7 +117,7 @@
             // tbCodArt
             // 
             this.tbCodArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbCodArt.Location = new System.Drawing.Point(148, 48);
+            this.tbCodArt.Location = new System.Drawing.Point(212, 105);
             this.tbCodArt.Name = "tbCodArt";
             this.tbCodArt.Size = new System.Drawing.Size(179, 20);
             this.tbCodArt.TabIndex = 0;
@@ -125,7 +125,7 @@
             // tbNomArt
             // 
             this.tbNomArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbNomArt.Location = new System.Drawing.Point(148, 74);
+            this.tbNomArt.Location = new System.Drawing.Point(212, 131);
             this.tbNomArt.Name = "tbNomArt";
             this.tbNomArt.Size = new System.Drawing.Size(179, 20);
             this.tbNomArt.TabIndex = 1;
@@ -133,7 +133,7 @@
             // tbDescArt
             // 
             this.tbDescArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbDescArt.Location = new System.Drawing.Point(148, 109);
+            this.tbDescArt.Location = new System.Drawing.Point(212, 166);
             this.tbDescArt.Name = "tbDescArt";
             this.tbDescArt.Size = new System.Drawing.Size(179, 20);
             this.tbDescArt.TabIndex = 2;
@@ -141,7 +141,7 @@
             // tbPreArt
             // 
             this.tbPreArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbPreArt.Location = new System.Drawing.Point(148, 201);
+            this.tbPreArt.Location = new System.Drawing.Point(212, 258);
             this.tbPreArt.Name = "tbPreArt";
             this.tbPreArt.Size = new System.Drawing.Size(179, 20);
             this.tbPreArt.TabIndex = 6;
@@ -150,7 +150,7 @@
             // 
             this.cboCatArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCatArt.FormattingEnabled = true;
-            this.cboCatArt.Location = new System.Drawing.Point(148, 139);
+            this.cboCatArt.Location = new System.Drawing.Point(212, 196);
             this.cboCatArt.Name = "cboCatArt";
             this.cboCatArt.Size = new System.Drawing.Size(179, 21);
             this.cboCatArt.TabIndex = 3;
@@ -159,7 +159,7 @@
             // 
             this.cboMarcaArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboMarcaArt.FormattingEnabled = true;
-            this.cboMarcaArt.Location = new System.Drawing.Point(148, 170);
+            this.cboMarcaArt.Location = new System.Drawing.Point(212, 227);
             this.cboMarcaArt.Name = "cboMarcaArt";
             this.cboMarcaArt.Size = new System.Drawing.Size(179, 21);
             this.cboMarcaArt.TabIndex = 4;
@@ -168,8 +168,8 @@
             // 
             this.btnAddArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddArt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAddArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddArt.Location = new System.Drawing.Point(349, 438);
+            this.btnAddArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddArt.Location = new System.Drawing.Point(612, 468);
             this.btnAddArt.Name = "btnAddArt";
             this.btnAddArt.Size = new System.Drawing.Size(110, 46);
             this.btnAddArt.TabIndex = 7;
@@ -182,7 +182,7 @@
             this.lbTituloArtAltas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTituloArtAltas.AutoSize = true;
             this.lbTituloArtAltas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloArtAltas.Location = new System.Drawing.Point(366, 9);
+            this.lbTituloArtAltas.Location = new System.Drawing.Point(414, 9);
             this.lbTituloArtAltas.Name = "lbTituloArtAltas";
             this.lbTituloArtAltas.Size = new System.Drawing.Size(166, 25);
             this.lbTituloArtAltas.TabIndex = 3;
@@ -191,9 +191,9 @@
             // btnCancelAdd
             // 
             this.btnCancelAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancelAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelAdd.Location = new System.Drawing.Point(629, 438);
+            this.btnCancelAdd.BackColor = System.Drawing.Color.Crimson;
+            this.btnCancelAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelAdd.Location = new System.Drawing.Point(824, 468);
             this.btnCancelAdd.Name = "btnCancelAdd";
             this.btnCancelAdd.Size = new System.Drawing.Size(111, 46);
             this.btnCancelAdd.TabIndex = 8;
@@ -204,7 +204,7 @@
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbArt.Location = new System.Drawing.Point(349, 48);
+            this.pbArt.Location = new System.Drawing.Point(583, 105);
             this.pbArt.Margin = new System.Windows.Forms.Padding(2);
             this.pbArt.Name = "pbArt";
             this.pbArt.Size = new System.Drawing.Size(391, 342);
@@ -216,7 +216,7 @@
             // 
             this.lbImgArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbImgArt.AutoSize = true;
-            this.lbImgArt.Location = new System.Drawing.Point(54, 243);
+            this.lbImgArt.Location = new System.Drawing.Point(118, 300);
             this.lbImgArt.Name = "lbImgArt";
             this.lbImgArt.Size = new System.Drawing.Size(85, 13);
             this.lbImgArt.TabIndex = 5;
@@ -225,7 +225,7 @@
             // tbImgArt
             // 
             this.tbImgArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbImgArt.Location = new System.Drawing.Point(148, 236);
+            this.tbImgArt.Location = new System.Drawing.Point(212, 293);
             this.tbImgArt.Name = "tbImgArt";
             this.tbImgArt.Size = new System.Drawing.Size(179, 20);
             this.tbImgArt.TabIndex = 5;
@@ -235,7 +235,7 @@
             // 
             this.dgvUrlImg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvUrlImg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUrlImg.Location = new System.Drawing.Point(7, 329);
+            this.dgvUrlImg.Location = new System.Drawing.Point(71, 412);
             this.dgvUrlImg.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUrlImg.Name = "dgvUrlImg";
             this.dgvUrlImg.Size = new System.Drawing.Size(320, 155);
@@ -245,7 +245,7 @@
             // btnAddUrl
             // 
             this.btnAddUrl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddUrl.Location = new System.Drawing.Point(145, 268);
+            this.btnAddUrl.Location = new System.Drawing.Point(209, 325);
             this.btnAddUrl.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddUrl.Name = "btnAddUrl";
             this.btnAddUrl.Size = new System.Drawing.Size(80, 24);
@@ -257,7 +257,7 @@
             // btnDelUrl
             // 
             this.btnDelUrl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDelUrl.Location = new System.Drawing.Point(233, 268);
+            this.btnDelUrl.Location = new System.Drawing.Point(297, 325);
             this.btnDelUrl.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelUrl.Name = "btnDelUrl";
             this.btnDelUrl.Size = new System.Drawing.Size(80, 24);
@@ -270,7 +270,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 300);
+            this.label1.Location = new System.Drawing.Point(68, 383);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 13);
             this.label1.TabIndex = 40;
@@ -281,7 +281,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(880, 497);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1060, 757);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvUrlImg);

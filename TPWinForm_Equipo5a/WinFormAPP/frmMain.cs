@@ -19,7 +19,7 @@ namespace WinFormAPP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("¡Bienvenidos a la aplicacion!");
         }
 
         private void agregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)

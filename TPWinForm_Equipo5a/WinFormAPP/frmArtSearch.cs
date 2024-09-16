@@ -25,7 +25,10 @@ namespace WinFormAPP
         private Articulo art = null;
         private Imagen img = null;
         private int estado = 0;
-        public frmArtSearch();
+        public frmArtSearch()
+        {
+            InitializeComponent();
+        }
         public frmArtSearch(int estado, Articulo artListado)
         {
             InitializeComponent();
